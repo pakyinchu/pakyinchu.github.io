@@ -75,9 +75,9 @@ function saveData() {
 
 function startLesson() {
     // filter items in the deck if it is new or pass review time 
-    // let unlearnedCards = dataset.deck.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
+    let unlearnedCards = dataset.deck.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
     
-    let unlearnedCards = filterDeck(dataset.deck);
+    // let unlearnedCards = filterDeck(dataset.deck);
     
     // store in lesson data in global variables
     totalUnlearnedCards = unlearnedCards.length;
@@ -97,11 +97,11 @@ function startLesson() {
     }
 }
 
-function filterDeck(deck) {
-    let unlearnedCards = deck.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
-    unlearnedCards = unlearnedCards.filter(card => !card.tags.some(tag => tag.startsWith("1.")));
-    return unlearnedCards;
-}
+// function filterDeck(deck) {
+//     let unlearnedCards = deck.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
+//     unlearnedCards = unlearnedCards.filter(card => !card.tags.some(tag => tag.startsWith("1.")));
+//     return unlearnedCards;
+// }
 
 function checkAnswer(userInput, answers) {
     // Using '===' to indicate a strict euqality check even though most of the time we are only comparing string
