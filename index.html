@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"></meta>
+        <title>FLASH CARD APP</title>
+        <link href="./css/reset.css" rel="stylesheet" />
+        <link href="./css/layout.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=RocknRoll+One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla">
+        <script src="./scripts/index.js" defer></script>
+    </head>
+    <body>
+        <div class="topnav">
+            <div class="home">
+                <a href="./index.html"><span>FLASHCARD</span></a>
+            </div>
+            <div class="stats">
+                <span id="correctPercentage"></span>
+                <span id="remainingCount"></span>
+            </div>
+            <nav class="navs">
+                <ul>
+                    <li>
+                        <button id="loadButton" onclick="loadData()">Load</button>
+                        <input id="loadFileInput" type="file" accept=".json" hidden /> 
+                    </li>
+                    <li>
+                        <button id="saveButton" onclick="saveData()" disabled>Save</button>
+                        <a id="save" hidden></a>
+                    </li>
+                    <li>
+                        <div id="profile">
+                            <table>
+                                <tr>
+                                    <td id="username"></td>
+                                </tr>
+                                <tr>
+                                    <td id="level"></td>
+                                </tr>
+                                <tr>
+                                    <td id="lastSeen"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        
+        <div class="question">
+        </div>
+        <div class="tags">
+        </div>
+        <div class="answer">
+            <div class="answerInputDiv">
+                <input class="answerInput" disabled />
+                <button id="answerInputButton" disabled>↪</button>
+            </div>
+        </div>
+        <div class="utils">
+            <button id="notesButton" onclick="toggleNotes()" disabled>See Notes</button>
+        </div>
+        <div class="notes">
+            <div class="notesCard" hidden>
+            </div>
+        </div>
+        <footer class="footer">Copyright &copy Wilson Chu<span style="font-family: 'RocknRoll One'">&nbsp;|&nbsp;朱<span></footer>
+        <dialog class="coverModal" id="landingDialog">
+            <p>
+                Welcome!<br>Please load a deck to start<br>by clicking on the load button.
+            </p>
+            <button onclick="loadData()" autofocus>Load</button>
+            <button onclick="closeDialog(this)" autofocus>Close</button>
+        </dialog>
+        <dialog class="coverModal" id="completeDialog">
+            <p>
+                Congratulations!<br>You have completed the deck for now.<br>Progress has been saved.
+            </p>
+            <button onclick="closeDialog(this)" autofocus>Close</button>
+        </dialog>
+    </body>
+</html>
