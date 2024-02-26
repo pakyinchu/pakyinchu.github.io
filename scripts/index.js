@@ -405,14 +405,15 @@ function openSetting() {
         let checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.id = tag;
+        checkbox.className = "settingDialogCheckbox";
         checkbox.value = tag;
         checkbox.checked = true;
 
         let label = document.createElement('label');
         label.htmlFor = tag;
+        label.appendChild(checkbox);
         label.appendChild(document.createTextNode(tag));
 
-        tagList.appendChild(checkbox);
         tagList.appendChild(label);
         tagList.appendChild(document.createElement('br'));
     });
@@ -427,4 +428,11 @@ function saveSetting() {
     let filteredDeck = dataset.deck.filter(item => item.tags.some(tag => selectedTags.includes(tag)));
     // restart the lesson with the new deck
     startLesson(filteredDeck);
+}
+
+function toggleSettingDialogCheckbox() {
+    let checkboxes = document.getElementsByClassName('settingDialogCheckbox');
+    for (let i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = !checkboxes[i].checked;
+    }
 }
