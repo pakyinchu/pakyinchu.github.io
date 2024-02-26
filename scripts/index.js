@@ -3,6 +3,7 @@ let lessons;
 let currentCard;
 let totalUnlearnedCards;
 let totalIncorrectCount = 0;
+let uniqueTags;
 
 const loadButton = document.getElementById('loadButton');
 const saveButton = document.getElementById('saveButton');
@@ -49,6 +50,8 @@ reader.addEventListener(
                 currentLevel.updateTime = dataset.lastSeen;
             }
 
+            uniqueTags = [...new Set(dataset.deck.flatMap(item => item.tags))];
+
             landingDialog.close();
 
             startLesson();
@@ -73,11 +76,10 @@ function saveData() {
     saveProgress();
 }
 
-function startLesson() {
+function startLesson(deck = dataset.deck) {
     // filter items in the deck if it is new or pass review time 
-    let unlearnedCards = dataset.deck.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
-    
-    // let unlearnedCards = filterDeck(dataset.deck);
+    // default to the original deck but allow to pass in a filtered deck - see saveSetting()
+    let unlearnedCards = filterDeck(deck);
     
     // store in lesson data in global variables
     totalUnlearnedCards = unlearnedCards.length;
@@ -97,11 +99,11 @@ function startLesson() {
     }
 }
 
-// function filterDeck(deck) {
-//     let unlearnedCards = deck.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
-//     unlearnedCards = unlearnedCards.filter(card => !card.tags.some(tag => tag.startsWith("1.")));
-//     return unlearnedCards;
-// }
+function filterDeck(deck) {
+    let unlearnedCards = deck.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
+    // unlearnedCards = unlearnedCards.filter(card => !card.tags.some(tag => tag.startsWith("1.")));
+    return unlearnedCards;
+}
 
 function checkAnswer(userInput, answers) {
     // Using '===' to indicate a strict euqality check even though most of the time we are only comparing string
@@ -393,4 +395,36 @@ function toggleLoadSaveButton(start) {
         loadButton.removeAttribute("disabled");
         saveButton.setAttribute("disabled", "");
     }
+}
+
+function openSetting() {
+    let tagList = document.getElementById('settingDialogTagList');
+    tagList.innerHTML = '';
+
+    uniqueTags.forEach(tag => {
+        let checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = tag;
+        checkbox.value = tag;
+        checkbox.checked = true;
+
+        let label = document.createElement('label');
+        label.htmlFor = tag;
+        label.appendChild(document.createTextNode(tag));
+
+        tagList.appendChild(checkbox);
+        tagList.appendChild(label);
+        tagList.appendChild(document.createElement('br'));
+    });
+
+    document.getElementById('settingDialog').showModal();
+}
+
+function saveSetting() {
+    // From the set of uniqeTags, find the ones that are checked
+    let selectedTags = uniqueTags.filter(tag => document.getElementById(tag).checked);
+    // Show card from deck if it has a tag in the list of select tags
+    let filteredDeck = dataset.deck.filter(item => item.tags.some(tag => selectedTags.includes(tag)));
+    // restart the lesson with the new deck
+    startLesson(filteredDeck);
 }

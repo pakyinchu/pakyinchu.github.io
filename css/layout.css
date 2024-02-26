@@ -198,17 +198,7 @@ input, button {
     color: white;
 }
 
-#loadButton {
-    font-size: 1em;
-    border: none;
-    background-color: rgb(90, 100, 110);
-    color: white;
-    cursor: pointer;
-    opacity: 0.6;
-    transition: 1s;
-}
-
-#saveButton {
+.topnavButton {
     font-size: 1em;
     border: none;
     background-color: rgb(90, 100, 110);
