@@ -22,12 +22,15 @@
             <nav class="navs">
                 <ul>
                     <li>
-                        <button id="loadButton" onclick="loadData()">Load</button>
+                        <button class="topnavButton" id="loadButton" onclick="loadData()">Load</button>
                         <input id="loadFileInput" type="file" accept=".json" hidden /> 
                     </li>
                     <li>
-                        <button id="saveButton" onclick="saveData()" disabled>Save</button>
+                        <button class="topnavButton" id="saveButton" onclick="saveData()" disabled>Save</button>
                         <a id="save" hidden></a>
+                    </li>
+                    <li>
+                        <button class="topnavButton" id="settingButton" onclick="openSetting()">Setting</button>
                     </li>
                     <li>
                         <div id="profile">
@@ -79,6 +82,14 @@
                 Congratulations!<br>You have completed the deck for now.<br>Progress has been saved.
             </p>
             <button onclick="closeDialog(this)" autofocus>Close</button>
+        </dialog>
+        <dialog id="settingDialog">
+            <form method="dialog">
+                <p><label id="settingDialogTagList"></label></p>
+                
+                <button onclick="closeDialog(this)">Close</button>
+                <button onclick="saveSetting()" autofocus>Save</button>
+              </form>
         </dialog>
     </body>
 </html>
