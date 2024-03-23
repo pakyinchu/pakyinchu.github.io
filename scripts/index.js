@@ -105,6 +105,23 @@ function filterDeck(deck) {
     return unlearnedCards;
 }
 
+function checkFitbAnswer(userInput, answers) {
+    const correct = userInput.toLowerCase() === answers.filter(item => item !== '').map(a=>a.toLowerCase()).join(' ');
+    if (correct) {
+        answerInput.classList.add('correctAnswer');
+        answerInput.classList.remove('incorrectAnswer');
+        answerInputButton.classList.add('correctAnswer');
+        answerInputButton.classList.remove('incorrectAnswer');
+        return true;
+    } else {
+        answerInput.classList.add('incorrectAnswer');  
+        answerInput.classList.remove('correctAnswer');
+        answerInputButton.classList.add('incorrectAnswer');  
+        answerInputButton.classList.remove('correctAnswer');
+        return false;
+    }
+}
+
 function checkAnswer(userInput, answers) {
     // Using '===' to indicate a strict euqality check even though most of the time we are only comparing string
     // prevent edge cases when answers are falsy or numeric (i.e. 0, false)
@@ -162,8 +179,13 @@ function handleNextCard() {
 function submitAnswer() {
     // Allow user to check the notes after a question is attempt
     notesButton.removeAttribute("disabled");
-
-    const isCorrect = checkAnswer(answerInput.value, currentCard.answers);
+    
+    let isCorrect = false;
+    if (currentCard.category === 'fitb') {
+        isCorrect = checkFitbAnswer(answerInput.value, currentCard.answers);
+    } else {
+        isCorrect = checkAnswer(answerInput.value, currentCard.answers);
+    }
 
     // update data for a card
     if (isCorrect) {
