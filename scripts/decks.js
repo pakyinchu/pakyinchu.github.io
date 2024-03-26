@@ -1,46 +1,70 @@
+import { Deck } from "./Deck.js";
+import { Card } from "./Card.js";
+
 let dataset;
-let deck = [];
+let deck = new Deck();
 let totalCards = 0;
 const fitbPlaceholder = "___";
 const loadButton = document.getElementById('loadButton');
 const saveButton = document.getElementById('saveButton');
 const tbody = document.querySelector('.deck table tbody');
-const reader = new FileReader();
-let fileType;
+const fileInput = document.getElementById('loadFileInput');
 
-reader.addEventListener(
-    "load",
-    () => {
-        if (fileType === 'application/json') {
-            jsonFileHandler();
-        } else {
-            textFileHandler();
-        }
-        toggleLoadSaveButton(true);
-    },
-    false,
-);
 
-function loadData() {
-    const fileInput = document.getElementById('loadFileInput');
-    
-    fileInput.click();
-    fileInput.addEventListener("change", () => {
+setUpEventListeners();
+
+function setUpEventListeners() {
+    fileInput.addEventListener("change", async () => {
         const file = fileInput.files[0];
-        fileType = file.type;
-        reader.readAsText(file);
+
+        if (file.type === 'application/json') {
+            await deck.loadFromJSON(file);
+        } else {
+            await deck.loadFromText(file);
+        }
+    
+        // Reset the file input value
+        fileInput.value = '';
+    
+        totalCards = deck.getTotalCards();
+        console.log("totalCards", totalCards);
+    
+        // Clear the tbody first
+        while (tbody.firstChild) {
+            tbody.removeChild(tbody.firstChild);
+        }
+    
+        deck.cards.forEach((card, index) => {
+            const row = createRow(index + 1, card);
+            tbody.appendChild(row);
+        });
+        
+        toggleLoadSaveButton(true);
     });
+    document.querySelector('#loadButton').addEventListener('click', loadData);
+    document.querySelector('#saveButton').addEventListener('click', saveData);
+    document.querySelector('#closeDialogButton').addEventListener('click', closeDialog);
+    document.querySelector('#saveCardButton').addEventListener('click', saveCard);
+    document.querySelector('#nextCardButton').addEventListener('click', nextCard);
+    document.querySelector('#exportDataButton').addEventListener('click', exportData);
 }
 
-function closeDialog(elem) {
-    // Method for close buttons inside a dialog element
-    elem.parentElement.close();
+function loadData() {
+    fileInput.click();
+}
+
+function closeDialog(event) {
+    var elem = event.currentTarget;
+    if (elem && elem.parentElement) {
+        elem.parentElement.close();
+    } else {
+        console.error('Cannot close dialog: elem or elem.parentElement is undefined');
+    }
 }
 
 function editCard(cardId, question, answers, category, notes, tags) {
     const words = notes.split(' ');
 
-    
     // Get the cardQuestion element
     const cardQuestion = document.getElementById('cardQuestion');
     // Clear the cardQuestion content
@@ -109,20 +133,29 @@ function saveCard() {
     // Append the new row to the table
     const row = document.querySelector(`.deck table tbody tr:nth-child(${cardId})`);
 
-    [question, answers, category, notes, tags].forEach((field, index) => {
+    [cardId, question, answers, category, notes, tags].forEach((field, index) => {
         const cell = row.children[index + 1];
         cell.textContent = field;
     });
 
     // Update the dataset and deck
-    deck[cardId - 1] = { question, answers, category, notes, tags };
+    deck.updateCard(cardId - 1, new Card(question, answers, category, notes, tags));
     dataset.deck = deck;
 
-    // Close the dialog
-    document.getElementById('editCardDialog').close();
+    // if next card is available, move to next card, otherwise close the dialog
+    if (cardId < totalCards) {
+        nextCard();
+    } else {
+        document.getElementById('editCardDialog').close();
+        // Reset the inputs
+        resetDialogInput();
+    }
+}
 
-    // Reset the inputs
-    resetDialogInput();
+function nextCard() {
+    const nextCardIndex = document.getElementById('cardId').textContent; 
+    ({question, answers, category, notes, tags } = deck.getCard(nextCardIndex));
+    editCard(Number(nextCardIndex) + 1, question, answers, category, notes, tags);
 }
 
 function resetDialogInput() {
@@ -132,17 +165,6 @@ function resetDialogInput() {
     document.getElementById('cardCategory').value = "";
     document.getElementById('cardNotes').value = "";
     document.getElementById('cardTags').value = [];
-}
-
-function addToDeck(question, answers, category, notes, tags) {
-    deck.push({
-        question: question,
-        answers: answers,
-        category: category,
-        notes: notes,
-        tags: tags
-    });
-    totalCards++;
 }
 
 function createDataset() {
@@ -160,6 +182,14 @@ function saveData() {
 }
 
 function exportData() {
+
+    // const bulkAdd = document.getElementById('bulkAddCheckbox').checked;
+    // if (bulkAdd && dataset.deck) {
+    //     dataset.deck.concat(deck);
+    // } else {
+        createDataset();
+    // }
+
     const deckName = document.getElementById('deckName').value;
     // Update last seen as current datetime
     // replace symbols in timestamp with hypen for attaching to a filename
@@ -189,38 +219,13 @@ function toggleLoadSaveButton(start) {
     }
 }
 
-function textFileHandler() {
-    const lines = reader.result.split('\n').map(line => line.replace('\r', ''));
+function createRow(cardId, card) {
 
-    // For each line create a table row and add rows to table
-    lines.forEach((line, index) => {
-        const question = line; // default to be same as notes
-        const answers = [];
-        const category = "fitb"; // default to be fill-in-the-blank type
-        const notes = line;
-        const tags = [];
-
-        addToDeck(question, answers, category, notes, tags);
-
-        const row = createRow(question, answers, category, notes, tags);
-        
-        tbody.appendChild(row);
-    });
-
-    createDataset();
-}
-
-function jsonFileHandler() {
-    dataset = JSON.parse(reader.result);
-    deck = dataset.deck;
-    deck.forEach((card, index) => {
-        const { question, answers, category, notes, tags } = card;
-        const row = createRow(question, answers, category, notes, tags);
-        tbody.appendChild(row);
-    })
-}
-
-function createRow(question, answers, category, notes, tags) {
+    const question = card.question;
+    const answers = card.answers;
+    const category = card.category;
+    const notes = card.notes;
+    const tags = card.tags;
     const row = document.createElement('tr');
         
     // Create the edit and delete buttons
@@ -233,11 +238,11 @@ function createRow(question, answers, category, notes, tags) {
     editButton.addEventListener('click', () => {
         const row = editButton.parentElement.parentElement;
         const cardId = row.rowIndex;
-        const question = row.cells[1].textContent;
-        const answers = row.cells[2].textContent.split(",").map(a => a.trim()) || [];
-        const category = row.cells[3].textContent;
-        const notes = row.cells[4].textContent;
-        const tags = row.cells[5].textContent || [];
+        const question = row.cells[2].textContent;
+        const answers = row.cells[3].textContent.split(",").map(a => a.trim()) || [];
+        const category = row.cells[4].textContent;
+        const notes = row.cells[5].textContent;
+        const tags = row.cells[6].textContent || [];
 
         editCard(cardId, question, answers, category, notes, tags);
     });
@@ -256,7 +261,7 @@ function createRow(question, answers, category, notes, tags) {
     row.appendChild(buttonsCell);
 
     // Create the cells for the table
-    [question, answers, category, notes, tags].forEach((field) => {
+    [cardId, question, answers, category, notes, tags].forEach((field) => {
         const cell = document.createElement('td');
         cell.textContent = field;
         row.appendChild(cell);

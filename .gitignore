@@ -3,3 +3,4 @@ references
 *.docx
 
 data/*.json
+data/*.txt

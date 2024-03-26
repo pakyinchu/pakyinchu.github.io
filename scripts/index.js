@@ -31,10 +31,11 @@ reader.addEventListener(
         // simulate data load
         setTimeout(function() {
             dataset = JSON.parse(reader.result);
-            for (let i = 0; i < dataset.deck.length; i++) {
-                dataset.deck[i].id = i;
-                dataset.deck[i].stage = dataset.deck[i].stage ? dataset.deck[i].stage : 0;
-                dataset.deck[i].incorrectCount = 0;
+            const cards = dataset.deck.cards;
+            for (let i = 0; i < cards.length; i++) {
+                cards[i].id = i;
+                cards[i].stage = cards[i].stage ? cards[i].stage : 0;
+                cards[i].incorrectCount = 0;
             }
 
             // Setup UI after data load
@@ -50,7 +51,7 @@ reader.addEventListener(
                 currentLevel.updateTime = dataset.lastSeen;
             }
 
-            uniqueTags = [...new Set(dataset.deck.flatMap(item => item.tags))];
+            uniqueTags = [...new Set(cards.flatMap(item => item.tags))];
 
             landingDialog.close();
 
@@ -100,7 +101,7 @@ function startLesson(deck = dataset.deck) {
 }
 
 function filterDeck(deck) {
-    let unlearnedCards = deck.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
+    let unlearnedCards = deck.cards.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
     // unlearnedCards = unlearnedCards.filter(card => !card.tags.some(tag => tag.startsWith("1.")));
     return unlearnedCards;
 }
@@ -210,7 +211,7 @@ function submitAnswer() {
     correctPercentageElem.innerHTML = `✔${correctPercentage}%&nbsp;`;
     
     // save the updated card back to the deck
-    dataset.deck[currentCard.id] = currentCard;
+    dataset.deck.cards[currentCard.id] = currentCard;
 }
 
 function displayCard(card) {
@@ -447,7 +448,7 @@ function saveSetting() {
     // From the set of uniqeTags, find the ones that are checked
     let selectedTags = uniqueTags.filter(tag => document.getElementById(tag).checked);
     // Show card from deck if it has a tag in the list of select tags
-    let filteredDeck = dataset.deck.filter(item => item.tags.some(tag => selectedTags.includes(tag)));
+    let filteredDeck = dataset.deck.cards.filter(item => item.tags.some(tag => selectedTags.includes(tag)));
     // restart the lesson with the new deck
     startLesson(filteredDeck);
 }

@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=RocknRoll+One">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla">
-        <script src="./scripts/decks.js" defer></script>
+        <script type="module" src="./scripts/decks.js" defer></script>
     </head>
     <body>
         <div class="topnav">
@@ -22,11 +22,15 @@
             <nav class="navs">
                 <ul>
                     <li>
-                        <button class="topnavButton" id="loadButton" onclick="loadData()">Load</button>
+                        <input type="checkbox" id="bulkAddCheckbox">
+                        <label for="bulkAddCheckbox">Bulk Add</label>
+                    </li>
+                    <li>
+                        <button class="topnavButton" id="loadButton">Load</button>
                         <input id="loadFileInput" type="file" accept=".txt,.json" hidden /> 
                     </li>
                     <li>
-                        <button class="topnavButton" id="saveButton" onclick="saveData()" disabled>Save</button>
+                        <button class="topnavButton" id="saveButton" disabled>Save</button>
                         <a id="save" hidden></a>
                     </li>
                     <li>
@@ -41,6 +45,7 @@
                 <thead>
                     <tr>
                         <th>Actions</th>
+                        <th>Card ID</th>
                         <th>Question</th>
                         <th>Answer</th>
                         <th>category</th>
@@ -52,8 +57,8 @@
             </table>
         </div>
         <footer class="footer">Copyright &copy Wilson Chu<span style="font-family: 'RocknRoll One'">&nbsp;|&nbsp;朱<span></footer>
-        <dialog id="editCardDialog" style="width: 500px; height: 300px">
-            <span id="cardId">0</span>/<span id="totalCards">0</span>
+        <dialog id="editCardDialog" style="width: 800px; height: 500px">
+            <span id="cardId">0</span>/<span id="totalCards"></span>
             <form method="dialog">
                 <div>
                     Question<p id="cardQuestion"></p>
@@ -79,14 +84,15 @@
                     tags<input id="cardTags" style="width: 100%"></input>
                 </div>
             </form>
-            <button onclick="closeDialog(this)">Close</button>
-            <button onclick="saveCard()" autofocus>Save</button>
+            <button id="closeDialogButton">Close</button>
+            <button id="saveCardButton" autofocus>Save</button>
+            <button id="nextCardButton" autofocus>Next</button>
         </dialog>
         <dialog id="saveDataDialog" style="width: 500px; height: 300px">
             <form method="dialog">
                 Deck Name: <input input id="deckName" style="width: 100%"></input>
-                <button onclick="closeDialog(this)">Close</button>
-                <button onclick="exportData()" autofocus>Save</button>
+                <button id="closeDialogButton">Close</button>
+                <button id="exportDataButton" autofocus>Save</button>
             </form>
         </dialog>
     </body>
