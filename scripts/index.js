@@ -77,7 +77,7 @@ function saveData() {
     saveProgress();
 }
 
-function startLesson(deck = dataset.deck) {
+function startLesson(deck = dataset.deck.cards) {
     // filter items in the deck if it is new or pass review time 
     // default to the original deck but allow to pass in a filtered deck - see saveSetting()
     let unlearnedCards = filterDeck(deck);
@@ -101,7 +101,7 @@ function startLesson(deck = dataset.deck) {
 }
 
 function filterDeck(deck) {
-    let unlearnedCards = deck.cards.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
+    let unlearnedCards = deck.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
     // unlearnedCards = unlearnedCards.filter(card => !card.tags.some(tag => tag.startsWith("1.")));
     return unlearnedCards;
 }
