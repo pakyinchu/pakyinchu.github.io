@@ -47,6 +47,7 @@ function setUpEventListeners() {
     document.querySelector('#saveCardButton').addEventListener('click', saveCard);
     document.querySelector('#nextCardButton').addEventListener('click', nextCard);
     document.querySelector('#exportDataButton').addEventListener('click', exportData);
+    document.querySelector('#addCardButton').addEventListener('click', addCard);
 }
 
 function loadData() {
@@ -60,6 +61,15 @@ function closeDialog(event) {
     } else {
         console.error('Cannot close dialog: elem or elem.parentElement is undefined');
     }
+    resetDialogInput();
+}
+
+function addCard() {
+
+    document.getElementById('cardId').innerHTML = totalCards + 1; 
+    document.getElementById('totalCards').innerHTML = totalCards + 1;
+    
+    document.getElementById('editCardDialog').showModal();
 }
 
 function editCard(cardId, question, answers, category, notes, tags) {
@@ -132,9 +142,16 @@ function saveCard() {
     const category = document.getElementById('cardCategory').value;
     const notes = document.getElementById('cardNotes').value;
     const tags = document.getElementById('cardTags').value.split(",").map(tag => tag.trim());
+    
+    let newCard = false;
+    let row = document.querySelector(`.deck table tbody tr:nth-child(${cardId})`);
 
-    // Append the new row to the table
-    const row = document.querySelector(`.deck table tbody tr:nth-child(${cardId})`);
+    // Create and append a new row to the table if row is undefined
+    if (!row) {
+        row = createRow(cardId, new Card(question, answers, category, notes, tags));
+        tbody.appendChild(row);
+        newCard = true;
+    }
 
     [cardId, question, answers, category, notes, tags].forEach((field, index) => {
         const cell = row.children[index + 1];
@@ -143,7 +160,12 @@ function saveCard() {
 
     // Update the dataset and deck
     deck.updateCard(cardId - 1, new Card(question, answers, category, notes, tags));
-    // dataset.deck = deck;
+
+    // Update the totalCards and enable the save button
+    if (newCard) {
+        totalCards++;
+        toggleLoadSaveButton(true);
+    }
 
     // if next card is available, move to next card, otherwise close the dialog
     if (cardId < totalCards) {
