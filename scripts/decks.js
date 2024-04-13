@@ -63,7 +63,7 @@ function closeDialog(event) {
 }
 
 function editCard(cardId, question, answers, category, notes, tags) {
-    const words = notes.split(' ');
+    const words = notes.split(' ').map(w => w.split(/(\W+)/)).flat().filter(w => w.length > 0);
 
     // Get the cardQuestion element
     const cardQuestion = document.getElementById('cardQuestion');
@@ -72,36 +72,39 @@ function editCard(cardId, question, answers, category, notes, tags) {
 
     words.forEach((word, wordIndex) => {
         const wordSpan = document.createElement('span');
-        wordSpan.textContent = answers.indexOf(word) >= 0 ? fitbPlaceholder : word;
+        wordSpan.textContent = (!/\W/.test(word) && answers.indexOf(word) >= 0) ? fitbPlaceholder : word;
         wordSpan.dataset.originalWord = word; // Store the original word
-        wordSpan.style.cursor = 'pointer';
-        wordSpan.style.backgroundColor = 'transparent';
 
-        wordSpan.addEventListener('mouseover', () => {
-            wordSpan.style.backgroundColor = 'lightyellow';
-        })
-
-        wordSpan.addEventListener('mouseout', () => {
+        if (!/\W/.test(word)) {
+            wordSpan.style.cursor = 'pointer';
             wordSpan.style.backgroundColor = 'transparent';
-        })
 
-        wordSpan.addEventListener('click', () => {
-            if (wordSpan.textContent === fitbPlaceholder) {
-                // Revert the wordSpan to the previous value
-                const wordIndex = answers.indexOf(wordSpan.dataset.originalWord);
-                if (wordIndex > -1) {
-                    answers[wordIndex] = "";
-                    wordSpan.textContent = wordSpan.dataset.originalWord;
+            wordSpan.addEventListener('mouseover', () => {
+                wordSpan.style.backgroundColor = 'lightyellow';
+            })
+    
+            wordSpan.addEventListener('mouseout', () => {
+                wordSpan.style.backgroundColor = 'transparent';
+            })
+    
+            wordSpan.addEventListener('click', () => {
+                if (wordSpan.textContent === fitbPlaceholder) {
+                    // Revert the wordSpan to the previous value
+                    const wordIndex = answers.indexOf(wordSpan.dataset.originalWord);
+                    if (wordIndex > -1) {
+                        answers[wordIndex] = "";
+                        wordSpan.textContent = wordSpan.dataset.originalWord;
+                    }
+                } else {
+                    // Populate the answer field when a word is clicked
+                    answers[wordIndex] = wordSpan.dataset.originalWord;
+                    wordSpan.textContent = fitbPlaceholder;
                 }
-            } else {
-                // Populate the answer field when a word is clicked
-                answers[wordIndex] = wordSpan.dataset.originalWord;
-                wordSpan.textContent = fitbPlaceholder;
-            }
-
-            // Reflect the answer input
-            document.getElementById('cardAnswer').value = answers;
-        });
+    
+                // Reflect the answer input
+                document.getElementById('cardAnswer').value = answers;
+            });
+        }
 
         // Append the wordSpan to the cardQuestion
         cardQuestion.appendChild(wordSpan);
@@ -140,7 +143,7 @@ function saveCard() {
 
     // Update the dataset and deck
     deck.updateCard(cardId - 1, new Card(question, answers, category, notes, tags));
-    dataset.deck = deck;
+    // dataset.deck = deck;
 
     // if next card is available, move to next card, otherwise close the dialog
     if (cardId < totalCards) {
@@ -154,7 +157,7 @@ function saveCard() {
 
 function nextCard() {
     const nextCardIndex = document.getElementById('cardId').textContent; 
-    ({question, answers, category, notes, tags } = deck.getCard(nextCardIndex));
+    const {question, answers, category, notes, tags } = deck.getCard(nextCardIndex);
     editCard(Number(nextCardIndex) + 1, question, answers, category, notes, tags);
 }
 

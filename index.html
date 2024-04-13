@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=RocknRoll+One">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nabla">
-        <script src="./scripts/index.js" defer></script>
+        <script type="module" src="./scripts/index.js" defer></script>
     </head>
     <body>
         <div class="topnav">
@@ -23,15 +23,15 @@
             <nav class="navs">
                 <ul>
                     <li>
-                        <button class="topnavButton" id="loadButton" onclick="loadData()">Load</button>
+                        <button class="topnavButton" id="loadButton">Load</button>
                         <input id="loadFileInput" type="file" accept=".json" hidden /> 
                     </li>
                     <li>
-                        <button class="topnavButton" id="saveButton" onclick="saveData()" disabled>Save</button>
+                        <button class="topnavButton" id="saveButton" disabled>Save</button>
                         <a id="save" hidden></a>
                     </li>
                     <li>
-                        <button class="topnavButton" id="settingButton" onclick="openSetting()">Setting</button>
+                        <button class="topnavButton" id="settingButton">Setting</button>
                     </li>
                     <li>
                         <div id="profile">
@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="utils">
-            <button id="notesButton" onclick="toggleNotes()" disabled>See Notes</button>
+            <button id="notesButton" disabled>See Notes</button>
         </div>
         <div class="notes">
             <div class="notesCard" hidden>
@@ -75,23 +75,22 @@
             <p>
                 Welcome!<br>Please load a deck to start<br>by clicking on the load button.
             </p>
-            <button onclick="loadData()" autofocus>Load</button>
-            <button onclick="closeDialog(this)" autofocus>Close</button>
+            <button id="modalLoadButton" autofocus>Load</button>
+            <button id="closeDialogButton" autofocus>Close</button>
         </dialog>
         <dialog class="coverModal" id="completeDialog">
             <p>
                 Congratulations!<br>You have completed the deck for now.<br>Progress has been saved.
             </p>
-            <button onclick="closeDialog(this)" autofocus>Close</button>
+            <button id="closeCompleteDialogButton" autofocus>Close</button>
         </dialog>
         <dialog id="settingDialog">
-            <button onclick="toggleSettingDialogCheckbox()">Toggle Checkbox</button>
+            <button id="settingDialogCheckbox">Toggle Checkbox</button>
             <form method="dialog">
                 <p><label id="settingDialogTagList"></label></p>
-                
-                <button onclick="closeDialog(this)">Close</button>
-                <button onclick="saveSetting()" autofocus>Save</button>
             </form>
+            <button id="closeSettingDialogButton">Close</button>
+            <button id="saveSettingButton" autofocus>Save</button>
         </dialog>
     </body>
 </html>

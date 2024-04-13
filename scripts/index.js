@@ -1,3 +1,5 @@
+import { QuestionFactory } from "./questions/QuestionFactory.js";
+
 let dataset;
 let lessons;
 let currentCard;
@@ -5,6 +7,8 @@ let totalUnlearnedCards;
 let totalIncorrectCount = 0;
 let uniqueTags;
 
+const questionFactory = new QuestionFactory();
+const fileInput = document.getElementById('loadFileInput');
 const loadButton = document.getElementById('loadButton');
 const saveButton = document.getElementById('saveButton');
 const notesButton = document.getElementById("notesButton"); 
@@ -17,10 +21,36 @@ const answerInputButton = document.getElementById("answerInputButton");
 const notesCardElem = document.getElementsByClassName("notesCard")[0];
 const landingDialog = document.querySelector("#landingDialog");
 const completeDialog = document.querySelector("#completeDialog");
+const settingDialog = document.querySelector("#settingDialog");
 const completeDialogCloseButton = document.querySelector("#completeDialog button");
 const reader = new FileReader();
 
 window.onload = landingDialog.showModal();
+
+setUpEventListeners();
+
+function setUpEventListeners() {
+    fileInput.addEventListener("change", async () => {
+        const file = fileInput.files[0];
+        reader.readAsText(file);
+    });
+    document.querySelector('#loadButton').addEventListener('click', loadData);
+    document.querySelector('#modalLoadButton').addEventListener('click', loadData);
+    document.querySelector('#saveButton').addEventListener('click', saveData);
+    document.querySelector('#settingButton').addEventListener('click', openSetting);
+    document.querySelector('#closeDialogButton').addEventListener('click', closeDialog);
+    document.querySelector('#closeCompleteDialogButton').addEventListener('click', closeDialog);
+    document.querySelector('#notesButton').addEventListener('click', toggleNotes);
+    document.querySelector('#settingDialogCheckbox').addEventListener('click', toggleSettingDialogCheckbox);
+    document.querySelector('#closeSettingDialogButton').addEventListener('click', closeDialog);
+    document.querySelector('#saveSettingButton').addEventListener('click', saveSetting);
+    answerInputButton.addEventListener('click', clickAnswerInputButton);
+    answerInput.addEventListener('keyup', keyupAnswerInput);
+}
+
+function loadData() {
+    fileInput.click();
+}
 
 reader.addEventListener(
     "load",
@@ -63,21 +93,11 @@ reader.addEventListener(
     false,
 );
 
-function loadData() {
-    const fileInput = document.getElementById('loadFileInput');
-    
-    fileInput.click();
-    fileInput.addEventListener("change", () => {
-        const file = fileInput.files[0];
-        reader.readAsText(file);
-    });
-}
-
 function saveData() {
     saveProgress();
 }
 
-function startLesson(deck = dataset.deck) {
+function startLesson(deck = dataset.deck.cards) {
     // filter items in the deck if it is new or pass review time 
     // default to the original deck but allow to pass in a filtered deck - see saveSetting()
     let unlearnedCards = filterDeck(deck);
@@ -101,48 +121,26 @@ function startLesson(deck = dataset.deck) {
 }
 
 function filterDeck(deck) {
-    let unlearnedCards = deck.cards.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
+    let unlearnedCards = deck.filter(card => !card.nextReviewTime || new Date(card.nextReviewTime) <= new Date());
     // unlearnedCards = unlearnedCards.filter(card => !card.tags.some(tag => tag.startsWith("1.")));
     return unlearnedCards;
 }
 
-function checkFitbAnswer(userInput, answers) {
-    const correct = userInput.toLowerCase() === answers.filter(item => item !== '').map(a=>a.toLowerCase()).join(' ');
+function updateAnswerInput(correct) {
     if (correct) {
         answerInput.classList.add('correctAnswer');
         answerInput.classList.remove('incorrectAnswer');
         answerInputButton.classList.add('correctAnswer');
         answerInputButton.classList.remove('incorrectAnswer');
-        return true;
     } else {
         answerInput.classList.add('incorrectAnswer');  
         answerInput.classList.remove('correctAnswer');
         answerInputButton.classList.add('incorrectAnswer');  
         answerInputButton.classList.remove('correctAnswer');
-        return false;
     }
 }
 
-function checkAnswer(userInput, answers) {
-    // Using '===' to indicate a strict euqality check even though most of the time we are only comparing string
-    // prevent edge cases when answers are falsy or numeric (i.e. 0, false)
-    // TODO: use regex to provide tips if user input is similar to the answer above a certain thershold 
-    if (answers.map(x=>x.toLowerCase()).includes(userInput.toLowerCase())) {
-        answerInput.classList.add('correctAnswer');
-        answerInput.classList.remove('incorrectAnswer');
-        answerInputButton.classList.add('correctAnswer');
-        answerInputButton.classList.remove('incorrectAnswer');
-        return true;
-    } else {
-        answerInput.classList.add('incorrectAnswer');  
-        answerInput.classList.remove('correctAnswer');
-        answerInputButton.classList.add('incorrectAnswer');  
-        answerInputButton.classList.remove('correctAnswer');
-        return false;
-    }
-}
-
-answerInputButton.addEventListener('click', (event) => {
+function clickAnswerInputButton() {
     // Click to check the answer
     // If user has already answered a question, move to the next question when the button is clicked again 
     if (answerInput.classList.contains('incorrectAnswer') || answerInput.classList.contains('correctAnswer')) {
@@ -150,10 +148,9 @@ answerInputButton.addEventListener('click', (event) => {
     } else {
         submitAnswer();
     }
-})
+}
 
-answerInput.addEventListener('keyup', (event) => {
-
+function keyupAnswerInput(event) {
     // Press enter to check the answer when the input is on focus
     // If user has already answered a question, move to the next question when enter is pressed again 
     if ((answerInput.classList.contains('incorrectAnswer') || answerInput.classList.contains('correctAnswer')) && event.key === 'Enter') {
@@ -161,7 +158,7 @@ answerInput.addEventListener('keyup', (event) => {
     } else if(event.key === 'Enter') {
         submitAnswer();
     }
-});
+}
 
 function handleNextCard() {
     // update the stats
@@ -182,11 +179,10 @@ function submitAnswer() {
     notesButton.removeAttribute("disabled");
     
     let isCorrect = false;
-    if (currentCard.category === 'fitb') {
-        isCorrect = checkFitbAnswer(answerInput.value, currentCard.answers);
-    } else {
-        isCorrect = checkAnswer(answerInput.value, currentCard.answers);
-    }
+    
+    let question = questionFactory.createQuestion(currentCard.category, currentCard.question, currentCard.answers);
+    isCorrect = question.checkAnswer(answerInput.value);
+    updateAnswerInput(isCorrect);
 
     // update data for a card
     if (isCorrect) {
@@ -300,9 +296,13 @@ function getNextReviewTime(stage) {
     return new Date(result);
 }
 
-function closeDialog(elem) {
-    // Method for close buttons inside a dialog element
-    elem.parentElement.close();
+function closeDialog(event) {
+    var elem = event.currentTarget;
+    if (elem && elem.parentElement) {
+        elem.parentElement.close();
+    } else {
+        console.error('Cannot close dialog: elem or elem.parentElement is undefined');
+    }
 }
 
 function endLesson() {
@@ -451,6 +451,7 @@ function saveSetting() {
     let filteredDeck = dataset.deck.cards.filter(item => item.tags.some(tag => selectedTags.includes(tag)));
     // restart the lesson with the new deck
     startLesson(filteredDeck);
+    settingDialog.close();
 }
 
 function toggleSettingDialogCheckbox() {
