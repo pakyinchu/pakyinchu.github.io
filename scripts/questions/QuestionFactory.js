@@ -1,7 +1,7 @@
-import { UnorderedListQuestion } from "./UnorderedListQuestion";
-import { FillInTheBlankQuestion } from "./FillInTheBlankQuestion";
-import { CommandQuestion } from "./CommandQuestion";
-
+import { UnorderedListQuestion } from "./UnorderedListQuestion.js";
+import { FillInTheBlankQuestion } from "./FillInTheBlankQuestion.js";
+import { CommandQuestion } from "./CommandQuestion.js";
+import { BackCompQuestion } from "./BackCompQuestion.js";
 export class QuestionFactory {
     createQuestion(category, question, answers) {
         switch (category) {
@@ -12,7 +12,8 @@ export class QuestionFactory {
             case "cmd":
                 return new CommandQuestion(question, answers);
             default:
-                throw new Error(`Invalid category: ${category}`);
+                /* throw new Error(`Invalid category: ${category}`); */
+                return new BackCompQuestion(question, answers);
         }
     }
 }
