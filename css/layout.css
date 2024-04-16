@@ -278,3 +278,11 @@ input, button {
     text-align: center;
     word-wrap: break-word;
 }
+
+.deck table {
+    white-space: nowrap;
+}
+
+#addCardButton {
+    margin: 1em;
+}
