@@ -1,0 +1,7 @@
+DHCP assigns IP related information such as IP address, subnet mask, domain name, default gateway, DNS server address and WINS server address to individual hosts
+While DHCP service can be accomplished by a server, it can also be configured on a router
+What is the command to exclude address when configuring dhcp?
+What is the command to assign a name to a dhcp pool?
+What is the command to attach a network to a dhcp pool?
+What is the command to configure the default gateway for a dhcp pool?
+What is the command to show dhcp binding?

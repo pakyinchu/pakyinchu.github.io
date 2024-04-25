@@ -1,0 +1,192 @@
+Recent trends in software and service distribution include the following: Pull technology, Push technology, Application service providers
+Pull technology has been around since the Web begin
+Pull technology is when a user states a need (makes a request) before getting information
+Push technology is when a web server delivers information to users who have signed up for the service without waiting for the user’s request.
+Push technology improves business relations and customer service
+Examples of push technology includes the following: Microsoft Azure Notification Hubs, Apple Push Notification, Facebook Push Notification
+Internet service providers provide access to the Internet
+Application service providers provide access to a software or provides a service for a fee
+Software as a Service (SaaS) is an example of ASPs where software is delivered to users for a fee
+Software as a Service is “on-demand software”
+Software can be for temporary or long-term use
+Software as a Service only deals with software, not storage or hardware resources
+One of the Application Service Provider advantages is customer does not need to worried about software updates
+Freeing up personnel resources for other business-focused tasks is one of the Application Service Provider advantages
+One of the Application Service Provider advantages is that software development costs are spread out
+One of the Application Service Provider advantages is that ASP contract guarantees a certain level of technical support
+Predictable monthly fees is one of the Application Service Provider advantages
+One of the Application Service Provider disadvantages is that users must accept applications as provided by the ASPs
+One of the Application Service Provider disadvantages is that it may not meet organization’s needs
+One of the Application Service Provider disadvantages is that integration with current systems could be challenging
+Popular variations of the SaaS model are DaaS, BaaS, and SECaaS
+Data as a Service is a SaaS Variations
+Delivers data storage, integration, processing, and analytics services over the cloud is a SaaS Variations
+Backup as a Service is a SaaS Variations
+Provides offsite data storage for files, folders, or entire contents of a hard drive is a SaaS Variations
+Provides regular backups and high availability is a SaaS Variations
+SECSaaS is a SaaS Variations
+Provides cybersecurity services on subscription basis is a SaaS Variations
+Eases the responsibility of in-house security is a SaaS Variations
+Virtual Reality (VR) uses computer-generated, three dimensional images to create the illusion of interaction in a real-world environment
+Virtual Reality (VR) uses stereo sound and tactile sensations to enhance the feeling of being immersed in a 3D world.
+Two major types of environments in VR: egocentric, exocentric
+In Egocentric Environment, user is total immersed in the VR world
+Egocentric Environment uses either a head-mounted display (HMD) or virtual retinal display (VRD)
+In Exocentric Environment, user is a given a “window view” of VR
+In Exocentric Environment, data is rendered in 3D but users can only see it on a screen
+In Exocentric Environment, users cannot interact with objects like they can in an egocentric environment
+There are four major components to a VR system: Visual and aural system, Manual control for navigation, Central coordinating processor and software, Walker
+Visual and aural system components that allow users to see and hear the virtual world
+Manual control for navigation is a component that allows the user to navigate in the VR environment and control various objects
+Central coordinating processor and software system is a component that generates and manipulates high-quality graphics in real time
+Walker is the input devices that captures and records movements of the user’s feet
+Cave Automatic Virtual Environment (CAVE) is a cube-shaped room where the walls are read-project screens
+Cave Automatic Virtual Environment (CAVE) uses holographic devices to create, capture, and display images in true 3D form
+Cave Automatic Virtual Environment (CAVE) is used in many fields including archaeology, architecture, engineering, geology, and physics
+Cave Automatic Virtual Environment (CAVE) can be used to create prototypes, develop interfaces and simulate factory layouts and assembly lines
+Virtual Reality Applications: Assistance for the disabled, Architectural design, Education, Flight simulation, Videoconferencing and collaboration, Therapy
+Lack of fiber-optic infrastructure to deliver high-speed data transmission is an obstacles in Using VR Systems
+Confusion between the VR environment and the real environment is one of the problems for VR users
+Mobility and other problems with HMD is one of the problems for VR users
+Difficulty representing sound is one of the problems for VR users
+Need for additional computing power is one of the problems for VR users
+A virtual world is a simulated environment designed for users to interact with each other via avatars
+An avatar is a 2D or 3D graphical representation of a person in a virtual world
+Most uses cases are focused on gaming, social networking, and entertainment
+Augmented Reality is a branch of VR that generates a virtual scene that is overlaid on the real object
+Augmented Reality is currently used as a marketing tool for fields like education, entertainment and medicine
+AR users stay connected to the real-world environment
+Mixed reality falls between AR and VR
+Mixed reality merges real and virtual objects to produce new visualizations 
+Mixed reality overlays objects on real objects and anchors virtual objects to real world object so they can interact with one another
+Mixed reality user stays in the real-world environment
+Non-fungible tokens (NFT) is a one-of-a-kind crypto asset backed by a blockchain
+Non-fungible means that a token is not mutually interchangeable
+A blockchain is used to record transactions across connected devices as blocks of data that cannot be altered
+Non-Fungible Tokens are digital representations of virtual and real-world assets
+Fungible Tokens are representations of assets on a blockchain that are interchangeable
+Bitcoin is an example of fungible token
+Semi-fungible Tokens can be traded as both fungible and non-fungible
+Concert tickets are an example of SFT
+Semi-fungible Tokens can also be used for certification, real estate, memorabilia, logistics, and gaming
+Excessive hype is one of the NFT Drawbacks
+Exaggeration in pricing is one of the NFT Drawbacks
+Uncertainty is one of the NFT Drawbacks
+Environmental issues of blockchain technology is one of the NFT Drawbacks
+Metaverse enables consumers to test products before purchasing them
+Metaverse gives medical professionals powerful insights about patients
+Metaverse makes gaming more realistic
+Metaverse allows consumers to visit other places without leaving their room
+Metaverse enhances communication
+Confusion on what is real and what is virtual is one of the Metaverse disadvantages
+Security and privacy concerns is one of the Metaverse disadvantages
+Digital divide is one of the Metaverse disadvantages
+Scalable usage is one of the 10 most popular cloud computing applications
+Chatbots is one of the 10 most popular cloud computing applications
+Worldwide communication is one of the 10 most popular cloud computing applications
+Global productivity tools is one of the 10 most popular cloud computing applications
+Business process and enterprise systems is one of the 10 most popular cloud computing applications
+Backup and recovery is one of the 10 most popular cloud computing applications
+Application development is one of the 10 most popular cloud computing applications
+Testing and development is one of the 10 most popular cloud computing applications
+Big data analytics is one of the 10 most popular cloud computing applications
+Social networking is one of the 10 most popular cloud computing applications
+Grid computing involves combining the processing powers of various computers
+Grid computing makes uses of other computer resources to solve problems
+Advantages of Grid Computing: Improved reliability, Parallel processing, Scalability
+Some applications cannot be spread among nodes is one of the disadvantages of Grid Computing
+Limits on memory for single nodes on a grid is one of the disadvantages of Grid Computing
+Licensing agreements can be challenging is one of the disadvantages of Grid Computing
+Synchronization can be difficult is one of the disadvantages of Grid Computing
+Resistance to sharing of resources is one of the disadvantages of Grid Computing
+Utility computing is the provision of IT services on demand
+In Utility (On-Demand) Computing, users pay for computing or storage resources on an as-needed basis
+Advantages of Utility (On-Demand) Computing: convenience and cost savings
+Disadvantages of Utility (On-Demand) Computing: privacy and security
+Cloud Computing uses one platform to incorporate many technologies: SaaS model, Web 2.0, Grid computing, Utility computing
+Cloud Computing components are classified as IaaS, PaaS, and SaaS
+Type of cloud computing hardware, servers and network components are delivered as a service with Infrastructure as a Service (IaaS)
+Service provider owns the equipment and is responsible for maintaining it with Infrastructure as a Service (IaaS)
+Platform as a service (PaaS) provides a computing platform and solution as a service
+Platform as a service (PaaS) is used to build applications and services over the Internet
+Platform as a service (PaaS) is hosted in the cloud and accessed by Web browsers
+Platform as a service (PaaS) automates the configuration, deployment, and management of applications in the cloud
+Six options when using cloud computing: Public, Private, Hybrid, Multicloud, Community cloud, Distributed cloud
+Decision for cloud computing alternatives is based on security needs and involvement IT managers require
+In Public Cloud, users connect with an off-site infrastructure over the Internet
+Public Cloud is shared by a large number of users
+Public Cloud offers the most cost savings
+Public Cloud has security and privacy risks
+Private Cloud services and infrastructure are run on private network
+Private Cloud provides better security and privacy than the public cloud
+Private Cloud has less cost savings than the public cloud
+Hybrid Cloud is a collection of at least one private cloud and at least one public cloud
+Organizations can take advantages of the public and private cloud by using hybrid cloud
+Hybrid Cloud may require multiple security platforms which can make communication challenging
+Multicloud is using more than a single public cloud in an organization
+Multicloud reduces the dependency to one specific provider
+Multicloud increases business agility and operational cost efficiency
+Multicloud can be more complex to manage
+Multicloud increased security risks
+Community Cloud is designed for exclusive use by a specific community of users from organizations that share common concerns about using the cloud
+Community Cloud costs are spread over fewer users than the public cloud but more than with a private cloud
+Community Cloud challenges include allocation of costs and responsibilities, governance and security
+Distributed Cloud Computing reduces latency
+Distributed Cloud Computing improves performance
+Distributed Cloud Computing may require multiple security platforms which can make communication challenging
+Edge computing pushes processing and data to the near edge of the network
+Edge computing enables a timely collection, processing and analysis of data
+Edge computing serves as a complement to cloud computing
+Real-time data analysis at the edge is an advantage of edge computing
+Lower operating costs is an advantage of edge computing
+Reduced network traffic is an advantage of edge computing
+Improved application performance is an advantage of edge computing
+Increased network performance is an advantage of edge computing
+Resilient from a single disruption is an advantage of edge computing
+Two types of security issues: The client (user), the server (provider)
+Cloud computing could be more secure than traditional on-premise data centers
+Cloud Computing Security risks include the following: Privileged user access, Regulatory compliance, Data location
+Cloud Computing Security risks include the following: Data segregation, Recovery, Investigative support, Long-term viability
+Nanotechnology incorporates techniques that involve the structure and composition of materials on a nanoscale
+Nanotechnology is based on the nanometer (one-billionth of a meter)
+Nanotechnology is used for healthcare, environmental needs, improve computer speeds and technology, energy, information and communication systems, and heavy industry
+Consumer goods that incorporate nanotechnology is called nanomaterials
+A blockchain is a decentralized and distributed network that is used to record transactions across connected devices as blocks of data that cannot be altered
+Transactions are grouped into blocks and linked together to create chains
+Blockchain Technology uses encryption technology to make the network accessible only to authorized users
+Blockchain Technology Disadvantages include an uncertain regulatory environment and lack of widespread adoption of the technology
+A blockchain is a decentralized and distributed network that is used to record transactions across connected devices as blocks of data that cannot be altered
+Transactions are grouped into blocks and linked together to create chains
+A blockchain uses encryption technology to make the network accessible only to authorized users
+Blockchain Disadvantages include an uncertain regulatory environment and lack of widespread adoption of the technology
+Blockchain as a Service (BaaS) is a new type of cloud service
+Blockchain as a Service (BaaS) is a third-party, cloud-based infrastructure 
+Organizations can use Blockchain as a Service (BaaS) to develop their own blockchain and smart contract applications
+Blockchain as a Service (BaaS) Disadvantages are similar to SaaS model
+Cryptocurrency is digital money created from computer codes
+Cryptocurrency is monitored by peer-to-peer IP
+Individual owns the private and public key of Cryptocurrency
+Popular keys include the following: Bitcoin, Ethereum, Binance Coin, Tether, Solana, Cardano
+Cannot be counterfeited or reversed by the sender is an advantage of Cryptocurrency
+Immediate settlement is an advantage of Cryptocurrency
+Lower transaction fees is an advantage of Cryptocurrency
+No risk of credit theft is an advantage of Cryptocurrency
+Available to anyone with a smartphone and Internet access is an advantage of Cryptocurrency
+Global access without linkage to a particular monetary system is an advantage of Cryptocurrency
+Not widely accepted is a disadvantage of Cryptocurrency
+No way to reverse the payment is a disadvantage of Cryptocurrency
+Regulation uncertainty is a disadvantage of Cryptocurrency
+Financial vulnerabilities due to data loss is a disadvantage of Cryptocurrency
+High price volatility and manipulation is a disadvantage of Cryptocurrency
+Environmental impact of cryptocurrency mining is a disadvantage of Cryptocurrency
+Not exchangeable for fiat currency is a disadvantage of Cryptocurrency
+Quantum computing uses quantum mechanics to generate and manipulate qubits
+Quantum computing solves problems considered impossible for traditional computers
+Quantum computing will not replace traditional computers
+Quantum Computing in Computer and Network Security can be used for strong encryption technology and also be used to crack an encryption algorithm
+Quantum Computing in Aviation Industry allows complex computer modeling and simulation of diverse aeronautical scenarios
+Quantum Computing in Data Analytics assists in solving problems on a large scale with multiple variables
+Quantum Computing in Forecasting could improve forecasting complex scenarios with numerous input variables
+Quantum Computing in Pattern Matching finds pattern among similar or dissimilar objects and predicting future events
+Quantum Computing in Medical and Pharmaceutical Research expedite process of bringing a new drug to market
+Quantum Computing in Self-Driving Cars develop better technology and batteries

@@ -1,0 +1,222 @@
+External devices that engage in I/O with computer systems can be grouped into three categories: Human readable, Machine readable, Communication
+Human readable devices are suitable for communicating with the computer user
+Human readable devices include printers, terminals, video display, keyboard, mouse
+Machine readable devices are suitable for communicating with electronic equipment
+Machine readable devices include disk drives, USB keys, sensors, controllers
+Communication devices are suitable for communicating with remote devices
+Communication devices include Modems, digital line drivers
+Devices differ in a number of areas: Data Rate, Application, Complexity of Control, Unit of Transfer, Data Representation, Error Conditions 
+There may be differences of magnitude between the data transfer rates for different I/O Devices
+The use to which a device is put has an influence on the software
+The effect on the operating system is filtered by the complexity of the I/O module that controls the device
+Data may be transferred as a stream of bytes or characters or in larger blocks
+Different data encoding schemes are used by different devices
+The nature of errors, the way in which they are reported, their consequences and the available range of responses differs from one device to another
+Three techniques for performing I/O are: Programmed I/O, Interrupt-driven I/O, Direct Memory Access (DMA)
+With programmed I/O, the processor issues an I/O command on behalf of a process to an I/O module
+With programmed I/O, a process busy waits for the operation to be completed before proceeding
+With interrupt-driven I/O, the processor issues an I/O command on behalf of a process
+With interrupt-driven I/O, if non-blocking, processor continues to execute instructions from the process that issued the I/O command that issued the I/O command
+With interrupt-driven I/O, if blocking, the next instruction the processor executes is from the OS, which will put the current process in a blocked state and schedule another process
+With Direct Memory Access (DMA), a DMA module controls the exchange of data between main memory and an I/O module
+Programmed I/O does not use interrupts and I/O-to-memory transfer through processor
+Interrupt-driven I/O uses interrupts and I/O-to-memory transfer through processor
+Direct memory access (DMA) uses interrupts and direct I/O-to-memory transfer
+1st evolution of the I/O Function: Processor directly controls a peripheral device
+2nd evolution of the I/O Function: A controller or I/O module is added
+3rd evolution of the I/O Function: Same configuration as step 2, but now interrupts are employed
+4th evolution of the I/O Function: The I/O module is given direct control of memory via DMA
+5th evolution of the I/O Function: The I/O module is enhanced to become a separate processor, with a specialized instruction set tailored for I/O
+6th evolution of the I/O Function: The I/O module has a local memory of its own and is, in fact, a computer in its own right
+When a processor wishes to read or write a block of data, it issues a command to DMA by sending: Whether a read or write is requested
+When a processor wishes to read or write a block of data, it issues a command to DMA by sending: Address of the I/O device
+When a processor wishes to read or write a block of data, it issues a command to DMA by sending: Starting location in memory to read from or write to
+When a processor wishes to read or write a block of data, it issues a command to DMA by sending: The number of words to be read or written
+DMA transfers the data without going through the processor
+When transfer is complete, DMA sends an interrupt to the processor
+Efficiency is the major effort in I/O design
+Efficiency is important because I/O operations often form a bottleneck
+Most I/O devices are extremely slow compared with main memory and the processor
+The area that has received the most attention is disk I/O
+Another design objectives is generality, which is desirable to handle all devices in a uniform manner
+Generality applies to the way processes view I/O devices and the way the operating system manages I/O devices and operations
+Diversity of devices makes it difficult to achieve true generality
+A hierarchical, modular approach is applied to the design of the I/O function to achieve generality
+To avoid overheads and inefficiencies, it is sometimes convenient to perform input transfers in advance of requests being made, and to perform output transfers some time after the request is made
+Block-oriented device stores information in blocks that are usually of fixed size
+Transfers are made one block at a time for block-oriented device
+It is possible to reference data by its block number for block-oriented device
+Disks and USB keys are examples of block-oriented device
+Stream-oriented device transfers data in and out as a stream of bytes
+There is no block structure for stream-oriented device
+Terminals, printers, communications ports, mouse and other pointing devices, and most other devices that are not secondary storage are examples of stream-oriented device
+Without a buffer, the OS directly accesses the device when it needs
+One of the problem of no buffer is that program is hung up waiting for the slow I/O to complete
+One of the problem of no buffer is that the part of the process’s memory space used for holding the I/O data must remains in memory and cannot be swapped out
+With Block Oriented Single Buffer, when a user process issues an I/O request, the OS assigns a buffer in the system portion of main memory for the operation
+With Block Oriented Single Buffer, input transfers are made to system buffer
+With Block Oriented Single Buffer, reading ahead/anticipated input is done in the expectation that the block will eventually be needed
+With Block Oriented Single Buffer, when the transfer is complete, the process moves the block into user space and immediately requests another block
+The Single buffer approach generally provides a speedup compared to the lack of system buffering
+With a Single buffer, the user process can be processing one block of data while the next block is being read in
+The OS is able to swap the process out because the input operation is taking place in system memory rather than user process memory
+One of the disadvantages of a single buffer is that it complicates the logic in the operating system
+One of the disadvantages of a single buffer is that the OS must keep track of the assignment of system buffers to user processes
+A Single Buffering for Stream-Oriented I/O can be used in a line-at-a-time fashion or a byte-at-a-time fashion
+Line-at-a-time operation is appropriate for scroll-mode terminals (dumb terminals)
+With a Line-at-a-time terminal, user input is one line at a time, with a carriage return signaling the end of a line
+With a Line-at-a-time terminal, output to the terminal is similarly one line at a time
+Byte-at-a-time operation is used on forms-mode terminals, when each keystroke is significant
+Byte-at-a-time operation is also used for other peripherals such as sensors and controllers
+A Double Buffer assigns two system buffers to the operation
+With a Double Buffer, a process now transfers data to or from one buffer while the operating system empties or fills the other buffer
+A double buffer is also known as buffer swapping
+When more than two buffers are used, the collection of buffers is itself referred to as a circular buffer
+Circular Buffer is used when I/O operation must keep up with process
+The actual details of disk I/O operation depend on the: Computer system, Operating system, Nature of the I/O channel and disk controller hardware
+When the disk drive is operating, the disk is rotating at constant speed
+To read or write the head must be positioned at the desired track and at the beginning of the desired sector on that track
+Track selection involves moving the head in a movable-head system or electronically selecting one head on a fixed-head system
+On a movable-head system the time it takes to position the head at the track is known as seek time
+The time it takes for the beginning of the sector to reach the head is known as rotational delay
+The sum of the seek time and the rotational delay equals the access time
+The First-In, First-Out (FIFO) algorithms is fair to all processes as it processes in sequential order
+The First-In, First-Out (FIFO) algorithms approximates random scheduling in performance if there are many processes competing for the disk
+The Priority (PRI) algorithms control of the scheduling is outside the control of disk management software
+The Goal of the Priority algorithms is not to optimize disk utilization but to meet other objectives
+Short batch jobs and interactive jobs are given higher priority in the Priority algorithms
+The Priority (PRI) algorithms provides good interactive response time
+Longer jobs may have to wait an excessively long time using the The Priority (PRI) algorithms
+The Priority (PRI) algorithms is a poor policy for database systems
+The Shortest Service Time First (SSTF) algorithms select the disk I/O request that requires the least movement of the disk arm from its current position
+The Shortest Service Time First (SSTF) algorithms always choose the minimum seek time
+Problem of the SSTF algorithms: Some requests may have to wait for a long time or never be served, Starvation may occur
+The Scan algorithms is also known as the elevator algorithm
+With the scan algorithm, arm moves in one direction only
+The Scan algorithm satisfies all outstanding requests until it reaches the last track or no more requests (LOOK policy) in that direction then the direction is reversed
+The scan algorithm favors jobs whose requests are for tracks nearest to both innermost and outermost tracks and favors the latest-arriving jobs
+The C-SCAN (Circular SCAN) algorithm restricts scanning to one direction only
+With the C-SCAN (Circular SCAN) algorithm, when the last track has been visited in one direction, the arm is returned to the opposite end of the disk and the scan begins again
+The N-Step-SCAN algorithm segments the disk request queue into subqueues of length N
+With the N-Step-SCAN algorithm, subqueues are processed one at a time, using SCAN
+With the N-Step-SCAN algorithm, while a queue is being processed new requests must be added to some other queue
+With the N-Step-SCAN algorithm, if fewer than N requests are available at the end of a scan, all of them are processed with the next scan
+FSCAN uses two subqueues
+With the FSCAN algorithm, when a scan begins, all of the requests are in one of the queues, with the other empty
+With the FSCAN algorithm, during scan, all new requests are put into the other queue
+With the FSCAN algorithm, service of new requests is deferred until all of the old requests have been processed
+Disk Scheduling Algorithms which selection according to requestor: Random, FIFO, PRI, LIFO
+Disk Scheduling Algorithms which selection according to requested item: SSTF, SCAN, C-SCAN, N-step-SCAN, FSCAN
+Random scheduling (Random): For analysis and simulation
+First in first out (FIFO): Fairest of them all
+Priority by process (PRI): Control outside of disk queue management
+Last in first out (LIFO): Maximize locality and resource utilization
+Shortest service time first (SSTF): High utilization, small queues
+Back and forth over disk (SCAN): Better service distribution
+One way with fast return (C-SCAN): Lower service variability
+SCAN of N records at a time (N-Step-SCAN): Service guarantee
+N-step-SCAN with N = queue size at beginning of SCAN cycle (FSCAN): Load sensitive
+Redundant Array of Independent Disks (RAID) consists of seven levels, zero through six
+One of the characteristics of RAID is that it is a set of physical disk drives viewed by the operating system as a single logical drive
+One of the characteristics of RAID is that data are distributed across the physical drives of an array in a scheme known as striping
+One of the characteristics of RAID is that redundant disk capacity is used to store parity information, which guarantees data recoverability in case of a disk failure
+The RAID strategy employs multiple disk drives and distributes data in such a way as to enable simultaneous access to data from multiple drives
+Simultaneous access to data from multiple drives improves I/O performance and allows easier incremental increases in capacity
+RAID supports the need for redundancy effectively
+RAID makes use of stored parity information that enables the recovery of data lost due to a disk failure
+RAID Level 0 is not a true RAID because it does not include redundancy to improve performance or provide data protection
+In RAID Level 0, user and system data are distributed across all of the disks
+In RAID Level 0, logical disk is divided into strips, which may be in unit of block or sector
+In RAID Level 0, if two I/O requests for two different blocks of data, two requests can be issued in parallel, reducing I/O queuing time
+In RAID Level 1 (Mirroring), redundancy is achieved by duplicating all the data
+In RAID Level 1 (Mirroring) can also be implemented without data striping
+In RAID Level 1 (Mirroring), read requests can be served by either of the two disks
+In RAID Level 1 (Mirroring), there is no “write penalty” – no parity bits computation is needed
+In RAID Level 1 (Mirroring), when a drive fails the data may still be accessed from the second drive
+In RAID Level 1 (Mirroring), the principal disadvantage is high cost
+RAID Level 2 makes use of a parallel access technique
+In RAID Level 2, data striping is used
+In RAID Level 2, typically a Hamming code is used
+RAID Level 2 is an effective choice in an environment in which many disk errors occur
+RAID Level 2 is not implemented because it is too costly
+RAID Level 3 requires only a single redundant disk, no matter how large the disk array
+RAID Level 3 employs parallel access, with data distributed in small strips (byte striping)
+In RAID Level 3, a simple parity bit is computed for the set of bits on other disks
+In RAID Level 3, data can reconstructed if a single drive fails
+RAID Level 3 can achieve very high data transfer rates
+In RAID Level 3, any I/O request will involve the parallel transfer of data from all data disks
+RAID Level 3 is good for sequential access, bad for random access
+RAID Level 4 use block level striping
+RAID Level 4 makes use of an independent access technique
+In RAID Level 4, a bit-by-bit parity strip is calculated across corresponding strips on each data disk, and the parity bits are stored in the corresponding strip on the parity disk
+RAID Level 4 involves a write penalty when an I/O write request of small size is performed
+RAID Level 4 is good for random read as data blocks are striped
+RAID Level 4 is bad for random write as for every write, it has to write to the single parity disk
+RAID Level 5 is similar to RAID-4 that uses block striping but distributes the parity bits across all disks
+Typical allocation in RAID Level 5 is a round-robin scheme
+RAID Level 5 has the characteristic that the loss of any one disk does not result in data loss
+In RAID Level 6, two different parity calculations are carried out and stored in separate blocks on different disks
+RAID Level 6 provides extremely high data availability
+In RAID Level 6, double parity provides fault tolerance up to two failed drives.
+RAID Level 6 incurs a substantial write penalty because each write affects two parity blocks
+RAID Level 0 Category: Striping
+RAID Level 0 Description: Nonredundant
+RAID Level 0 Disks required: N
+RAID Level 0 Data Availability: Lower than single disk
+RAID Level 0 Large I/O data transfer capacity: Very high
+RAID Level 0 Small I/O request rate: Very high for both read and write 
+RAID Level 1 Category: Mirroring
+RAID Level 1 Description: Mirrored
+RAID Level 1 Disks required: 2N
+RAID Level 1 Data Availability: Higher than RAID 2 to 5; Lower than 6
+RAID Level 1 Large I/O data transfer capacity: Higher than single disk for read; similar for write
+RAID Level 1 Small I/O request rate: Up to twice that of a single disk for read; similar for write
+RAID Level 2 Category: Parallel access
+RAID Level 2 Description: Redundant via Hamming code
+RAID Level 2 Disks required: N+m
+RAID Level 2 Data Availability: Much higher than single disk; comparable to RAID 3 to 5
+RAID Level 2 Large I/O data transfer capacity: Highest of all listed alternatives
+RAID Level 2 Small I/O request rate: Approximately twice that of a single disk
+RAID Level 3 Category: Parallel access
+RAID Level 3 Description: Bit-interleaved parity
+RAID Level 3 Disks required: N+1
+RAID Level 3 Data Availability: Much higher than single disk; comparable to RAID 2, 4, or 5
+RAID Level 3 Large I/O data transfer capacity: Highest of all listed alternatives
+RAID Level 3 Small I/O request rate: Approximately twice that of a single disk
+RAID Level 4 Category: Independent access
+RAID Level 4 Description: Block-interleaved parity
+RAID Level 4 Disks required: N+1
+RAID Level 4 Data Availability: Much higher than single disk; comparable to RAID 2, 3, or 5
+RAID Level 4 Large I/O data transfer capacity: Similar to RAID 0 for read; significantly lower than single disk for write
+RAID Level 4 Small I/O request rate: Similar to RAID 0 for read; significantly lower than single disk for write
+RAID Level 5 Category: Independent access
+RAID Level 5 Description: Block-interleaved distributed parity
+RAID Level 5 Disks required: N+1
+RAID Level 5 Data Availability: Much higher than single disk; comparable to RAID 2, 3, or 4
+RAID Level 5 Large I/O data transfer capacity: Similar to RAID 0 for read; lower than single disk for write
+RAID Level 5 Small I/O request rate: Similar to RAID 0 for read; generally lower than single disk for write
+RAID Level 6 Category: Independent access
+RAID Level 6 Description: Block-interleaved dual distributed parity
+RAID Level 6 Disks required: N+2
+RAID Level 6 Data Availability: Highest of all listed alternatives
+RAID Level 6 Large I/O data transfer capacity: Similar to RAID 0 for read; lower than RAID 5 for write
+RAID Level 6 Small I/O request rate: Similar to RAID 0 for read; significantly lower than RAID 5 for write
+Cache memory is used to apply to a memory that is smaller and faster than main memory and that is interposed between main memory and the processor
+Disk Cache reduces average memory access time by exploiting the principle of locality
+Disk cache is a buffer in main memory for disk sectors
+Disk cache contains a copy of some of the sectors on the disk
+When an I/O request is made for a particular sector, a check is made to determine if the sector is in the disk cache
+If the sector is in the disk cache, the request is satisfied via the cache
+If the sector is not in the disk cache, the requested sector is read into the disk cache from the disk
+Least Recently Used (LRU) is the most commonly used algorithm that deals with the design issue of replacement strategy
+With Least Recently Used (LRU), the block that has been in the cache the longest with no reference to it is replaced
+With Least Recently Used (LRU), a stack of pointers reference the cache
+With Least Recently Used (LRU), most recently referenced block is on the top of the stack
+With Least Recently Used (LRU), when a block is referenced or brought into the cache, it is placed on the top of the stack
+With Least Frequently Used (LFU), the block that has experienced the fewest references is replaced
+With Least Frequently Used (LFU), a counter is associated with each block
+With Least Frequently Used (LFU), counter is incremented each time block is accessed
+With Least Frequently Used (LFU), when replacement is required, the block with the smallest count is selected
+With Least Frequently Used (LFU), there are short intervals of repeated references to some blocks due to locality, thus building up high reference counts
+With Least Frequently Used (LFU), after such an interval is over, the reference count may be misleading and not reflect the probability that the block will soon be referenced again
+With Least Frequently Used (LFU), the effect of locality may actually cause the LFU algorithm to make poor replacement choices

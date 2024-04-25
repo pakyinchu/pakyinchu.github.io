@@ -1,0 +1,26 @@
+A Virtual LAN (VLAN) is a group of devices that are logically segmented by function, project team, or application, without regard to the physical locations of the users
+In other words, VLANs are similar to physical LANs, but end stations can be grouped even if they are not physically located on the same LAN segment
+A switch can be configured to support multiple VLANs, a VLAN can also be configured across multiple switches, and each VLAN is considered a logical network
+Any broadcast packets are flooded only to end stations within a VLAN, and packets destined for stations that do not belong to the VLAN must be forwarded through a router
+VLANs are usually associated with IP subnetworks such that all end stations in a particular VLAN belong to the same IP subnet
+To communicate between VLANs, you must route the traffic through a router
+VLAN trunking is used to inter-connect the VLANs on a number of switches
+A trunk is a point-to-point link between two network devices that carries packets from more than one VLAN
+With VLAN trunking, you can extend your configured VLANs across the entire network
+Most Cisco switches supports the IEEE 802.1Q protocol used to coordinate trunks on both FastEthernet and GigabitEthernet ports
+Since each VLAN operates as a separate subnet, layer 3 routing is needed to support communication between VLANs
+Inter-VLAN routing is hence carried out by connecting a router to the switch infrastructure
+Router-on-a-stick is a type of router configuration in which a single physical interface manages traffic between multiple VLANs on a network
+The router interface has to be configured to operate as a trunk link and is connected to a switch port which has configured in trunk mode
+The router uses an 802.1q trunk link to place multiple sub-interfaces for the VLANs using a single physical link
+A Sub-Interface is a logical interface partitioned off from a physical interface allowing multiple interface configurations on a single physical interface
+The router receives VLAN tagged traffic on the trunk interface from the switch, and forwards the routed traffic out to VLAN tagged destination using the same interface
+Today, routing can be performed at hardware speeds; consequently, routing can be performed at the core and distribution layers without impacting network performance
+Newer switch technologies, including multilayer switches (MLS) are available to help further improve the performance of computer networks
+An example of a multilayer switch is a layer 3 switch (3560)
+Layer 3 switches still work at layer 2 but also work at the network layer (layer 3) of the OSI model and use IP addressing for making decisions about routing a data packet in the best direction
+The major difference is that the packet switching in basic routers is handled by a programmed microprocessor
+A layer 3 switch uses application-specific integrated circuit (ASIC) hardware, to handle the packet switching
+The advantages of using hardware to handle the packet switching is a significant reduction in processing time compared to using software for packet switching
+In fact, the processing time of a layer 3 switches can be as fast as the input data rate
+Because many users are in separate VLANs and each VLAN is usually a separate subnet

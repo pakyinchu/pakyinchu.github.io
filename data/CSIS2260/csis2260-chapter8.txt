@@ -1,0 +1,186 @@
+One of the characteristics fundamental to memory management: All memory references are logical addresses that are dynamically translated into physical addresses at run time
+One of the characteristics fundamental to memory management: A process may be broken up into a number of pieces that don’t need to be contiguously located in main memory during execution
+If the two fundamental characteristics to memory management are present, it is not necessary that all of the pages or segments of a process be in main memory during execution
+Virtual memory: A storage allocation scheme in which secondary memory can be addressed as though it were part of main memory
+Virtual memory: The addresses a program may use to reference memory are distinguished from the addresses the memory system uses to identify physical storage sites, and program-generated addresses are translated automatically to the corresponding machine addresses
+Virtual memory: The size of virtual storage is limited by the addressing scheme of the computer system and by the amount of secondary memory available and not by the actual number of main storage locations
+Virtual address: The address assigned to a location in virtual memory to allow that location to be accessed as though it were part of main memory
+Virtual address space: The virtual storage assigned to a process
+Address space: The range of memory addresses available to a process
+Real address: The address of a storage location in main memory
+Execution of a Process: Operating system brings into main memory a few pieces of the program
+Execution of a Process: Resident set is the portion of process that is in main memory
+Execution of a Process: An interrupt is generated when an address is needed that is not in main memory
+Execution of a Process: Operating system places the process in a blocking state
+Execution of a Process: Piece of process that contains the logical address is brought into main memory
+Execution of a Process: Operating system issues a disk I/O Read request
+Execution of a Process: Another process is dispatched to run while the disk I/O takes place
+Execution of a Process: An interrupt is issued when disk I/O is complete, which causes the operating system to place the affected process in the Ready state
+Implications: More processes may be maintained in main memory because only some of the pieces of any particular process are loaded, there is room for more processes
+Implications: This leads to more efficient utilization of the processor because it is more likely that at least one of the more numerous processes will be in a Ready state at any particular time
+Implications: A process may be larger than all of main memory
+Implications: If the program being written is too large, the programmer must devise ways to structure the program into pieces that can be loaded separately in some sort of overlay strategy
+Implications: With virtual memory based on paging or segmentation, that job is left to the OS and the hardware
+Implications: The OS automatically loads pieces of a process into main memory as required
+Real memory is the Main memory, the actual RAM
+Virtual memory is memory on disk
+Virtual memory allows for effective multiprogramming and relieves the user of tight constraints of main memory
+Simple Paging: Main memory partition partitioned into small fixed-size chunks called frames
+Simple Paging: Program broken into pages by the compiler or internal operating system
+Simple Paging: Internal fragmentation within frames
+Simple Paging: No external fragmentation
+Simple Paging: Operating system must maintain a page table for each process showing which frame each page occupies
+Simple Paging: Processor uses page number, offset to calculate absolute address
+Simple Paging: All the pages of a process must be in main memory for process to run, unless overlays are used
+Virtual Memory Paging: Main memory partition partitioned into small fixed-size chunks called frames
+Virtual Memory Paging: Program broken into pages by the compiler or internal operating system
+Virtual Memory Paging: Internal fragmentation within frames
+Virtual Memory Paging: No external fragmentation
+Virtual Memory Paging: Operating system must maintain a page table for each process showing which frame each page occupies
+Virtual Memory Paging: Processor uses page number, offset to calculate absolute address
+Virtual Memory Paging: Not all pages of a process need be in main memory frames for the process to run. Pages may be read in as needed
+Virtual Memory Paging: Reading a page into main memory may require writing a page out to disk
+Simple Segmentation: Main memory not partitioned
+Simple Segmentation: Program segments specified by the programmer to the compiler (i.e., the decision is made by the programmer)
+Simple Segmentation: No internal fragmentation
+Simple Segmentation: External fragmentation
+Simple Segmentation: Operating system must maintain a segment table for each process showing the load address and length of each segment
+Simple Segmentation: Operating system must maintain a list of free holes in main memory
+Simple Segmentation: Processor uses segment number, offset to calculate absolute address
+Simple Segmentation: All the segments of a process must be in main memory for process to run, unless overlays are use
+Virtual Memory Segmentation: Main memory not partitioned
+Virtual Memory Segmentation: Program segments specified by the programmer to the compiler (i.e., the decision is made by the programmer)
+Virtual Memory Segmentation: No internal fragmentation
+Virtual Memory Segmentation: External fragmentation
+Virtual Memory Segmentation: Operating system must maintain a segment table for each process showing the load address and length of each segment
+Virtual Memory Segmentation: Operating system must maintain a list of free holes in main memory
+Virtual Memory Segmentation: Processor uses segment number, offset to calculate absolute address
+Virtual Memory Segmentation: Not all segments of a process need be in main memory for the process to run. Segments may be read in as needed
+Virtual Memory Segmentation: Reading a segment into main memory may require writing one or more segments out to disk
+Thrashing is a state in which the system spends most of its time swapping process pieces rather than executing Instructions
+To avoid Thrashing, the operating system tries to guess, based on recent history, which pieces are least likely to be used in the near future
+Principle of Locality: Program and data references within a process tend to cluster
+Principle of Locality: Only a few pieces of a process will be needed over a short period of time
+Principle of Locality: Therefore it is possible to make intelligent guesses about which pieces will be needed in the future
+Principle of Locality: helps to avoid thrashing
+For virtual memory to be practical and effective: Hardware must support paging and segmentation 
+For virtual memory to be practical and effective: Operating system must include software for managing the movement of pages and/or segments between secondary memory and main memory
+Paging: The term virtual memory is usually associated with systems that employ paging
+Paging: Each process has its own page table
+Paging: Each page table entry (PTE) contains the frame number of the corresponding page in main memory
+Paging: A page table is also needed for a virtual memory scheme based on paging
+The smaller the page size, the lesser the amount of internal fragmentation
+The smaller the page size, the more pages are required per process
+More pages per process means larger page tables
+For large programs in a heavily multiprogrammed environment some portion of the page tables of active processes must be in virtual memory instead of main memory
+The physical characteristics of most secondary-memory devices favor a larger page size for more efficient block transfer of data
+The design issue of page size is related to the size of physical main memory and program size
+Main memory is getting larger and address space used by applications is also growing
+Most obvious on personal computers where applications are becoming increasingly complex
+Segmentation allows the programmer to view memory as consisting of multiple address spaces or segments
+Segmentation Advantages: Simplifies handling of growing data structures
+Segmentation Advantages: Allows programs to be altered and recompiled independently
+Segmentation Advantages: Lends itself to sharing data among processes
+Segmentation Advantages: Lends itself to protection
+Segment Organization: Each segment table entry contains the starting address of the corresponding segment in main memory and the length of the segment
+Segment Organization: A bit is needed to determine if the segment is already in main memory
+Segment Organization: Another bit is needed to determine if the segment has been modified since it was loaded in main memory
+Combined Paging and Segmentation: In a combined paging/segmentation system a user’s address space is broken up into a number of segments.
+Combined Paging and Segmentation: Each segment is broken up into a number of fixed-sized pages which are equal in length to a main memory frame
+Combined Paging and Segmentation: Segmentation is visible to the programmer
+Combined Paging and Segmentation: Paging is transparent to the programmer
+One of the fundamental areas of choice for the design of the memory management portion of an operating system: Whether or not to use virtual memory techniques
+One of the fundamental areas of choice for the design of the memory management portion of an operating system: The use of paging or segmentation or both
+One of the fundamental areas of choice for the design of the memory management portion of an operating system: The algorithms employed for various aspects of memory management
+Policies for Virtual Memory: Key issue is performance, try to minimize page faults
+Fetch policy determines when a page should be brought into memory
+Two main types of Fetch policy: Demand Paging, Prepaging
+Demand Paging: Only brings pages into main memory when a reference is made to a location on the page
+Demand Paging: Many page faults when process is first started 
+Demand Paging: Principle of locality suggests that as more and more pages are brought in, most future references will be to pages that have recently been brought in, and page faults should drop to a very low level
+Prepaging: Pages other than the one demanded by a page fault are brought in
+Prepaging: Exploits the characteristics of most secondary memory devices
+Prepaging: If pages of a process are stored contiguously in secondary memory it is more efficient to bring in a number of pages at one time
+Prepaging: Ineffective if extra pages are not referenced
+Prepaging: Should not be confused with “swapping” 
+Placement Policy: Determines where in real memory a process piece is to reside
+Placement Policy: Important design issue in a segmentation system
+Placement Policy: Paging or combined paging with segmentation placing is irrelevant because hardware performs functions with equal efficiency
+Replacement Policy: Deals with the selection of a page in main memory to be replaced when a new page must be brought in
+Replacement Policy: Objective is that the page that is removed be the page least likely to be referenced in the near future
+Replacement Policy: The more elaborate the replacement policy the greater the hardware and software overhead to implement it
+Frame Locking: When a frame is locked the page currently stored in that frame may not be replaced
+Frame Locking: Kernel of the OS as well as key control structures are held in locked frames
+Frame Locking: I/O buffers and time-critical areas may be locked into main memory frames
+Frame Locking: Locking is achieved by associating a lock bit with each frame
+Basic Algorithms used for the selection of a page to replace: Optimal, Least recently used (LRU), First-in-first-out (FIFO), Clock
+Optimal Policy: Selects the page for which the time to the next reference is the longest
+Optimal Policy: Produces three page faults after the frame allocation has been filled
+Optimal Policy: Impossible to implement – used to judge other algorithms
+Least Recently Used (LRU): Replaces the page that has not been referenced for the longest time
+Least Recently Used (LRU): By the principle of locality, this should be the page least likely to be referenced in the near future
+Least Recently Used (LRU): Difficult to implement
+Least Recently Used (LRU): One approach is to tag each page with the time of last reference, but this requires a great deal of overhead
+First-in-First-out (FIFO): Treats page frames allocated to a process as a circular buffer
+First-in-First-out (FIFO): Pages are removed in round-robin style
+First-in-First-out (FIFO): Simple replacement policy to implement
+First-in-First-out (FIFO): Page that has been in memory the longest is replaced
+Clock Policy: Requires the association of an additional bit with each frame, referred to as the use bit
+Clock Policy: When a page is first loaded in memory or referenced, the use bit is set to 1
+Clock Policy: The set of frames is considered to be a circular buffer
+Clock Policy: When a page is replaced, the pointer is set to the next frame
+Clock Policy: To replace a page, OS scans for a page with use bit set to 0
+Clock Policy: If a page with use bit 1 is encountered, it resets it to 0 and continues on
+Clock Policy: Any frame with a use bit of 1 is passed over by the algorithm
+Clock Policy: Page frames visualized as laid out in a circle
+Resident Set Management: The OS must decide how many pages to bring into main memory
+Resident Set Management: The smaller the amount of memory allocated to each process, the more processes can reside in memory
+Resident Set Management: Small number of pages loaded increases page faults
+Resident Set Management: Beyond a certain size, further allocations of pages will not effect the page fault rate
+Resident Set Size: Fixed-allocation, Variable-allocation
+Fixed-allocation: Gives a process a fixed number of frames in main memory within which to execute
+Fixed-allocation: When a page fault occurs, one of the pages of that process must be replaced
+Variable-allocation: Allows the number of page frames allocated to a process to be varied over the lifetime of the process
+Variable-allocation: A process with high levels of page faults will be given additional page frames
+Variable-allocation: Relates to the concept of replacement scope
+Variable-allocation: Requires s/w overhead in OS
+Replacement scope: The scope of a replacement strategy can be categorized as global or local
+Replacement scope: Both types are activated by a page fault when there are no free page frames
+Replacement scope: Local chooses only among the resident pages of the process that generated the page fault
+Replacement scope: Global considers all unlocked pages in main memory
+Fixed Allocation with Local Replacement: Number of frames allocated to a process is fixed
+Fixed Allocation with Local Replacement: Page to be replaced is chosen from among the frames allocated to that process
+Fixed Allocation with Global Replacement: Not possible
+Variable Allocation with Local Replacement: The number of frames allocated to a process may be changed from time to time to maintain the working set of the process
+Variable Allocation with Local Replacement: Page to be replaced is chosen from among the frames allocated to that process
+Variable Allocation with Gobal Replacement: Page to be replaced is chosen from all available frames in main memory; this causes the size of the resident set of processes to vary
+Fixed Allocation with Local Scope: Necessary to decide ahead of time the amount of allocation to give a process
+Fixed Allocation with Local Scope: If allocation is too small, there will be a high page fault Rate
+Fixed Allocation with Local Scope: If allocation is too large, there will be too few programs in main memory
+Fixed Allocation with Local Scope: Too few programs in main memory increased processor idle time and increased time spent in swapping
+Variable Allocation with Global Scope: Easiest to implement
+Variable Allocation with Global Scope: Adopted in a number of operating systems
+Variable Allocation with Global Scope: OS maintains a list of free frames
+Variable Allocation with Global Scope: Free frame is added to resident set of process when a page fault occurs
+Variable Allocation with Global Scope: If no frames are available the OS must choose a page currently in memory
+Variable Allocation with Local Scope: When a new process is loaded into main memory, allocate to it a certain number of page frames as its resident set
+Variable Allocation with Local Scope: When a page fault occurs, select the page to replace from among the resident set of the process that suffers the fault
+Variable Allocation with Local Scope: Reevaluate the allocation provided to the process and increase or decrease it to improve overall performance
+Variable Allocation with Local Scope: Decision to increase or decrease a resident set size is based on the assessment of the likely future demands of active processes
+Variable Allocation with Local Scope: Criteria used to determine resident set size and the timing of changes are key elements
+Cleaning Policy: Concerned with determining when a modified page should be written out to secondary memory
+2 types of Cleaning Policy: Demand Cleaning and Precleaning
+Demand Cleaning: A page is written out to secondary memory only when it has been selected for replacement
+Demand Cleaning Problem: A page fault may have to wait for 2 page transfers before it can be unblocked
+Precleaning: Allows the writing of pages in batches
+Precleaning Problems: pages may be modified again before they are replaced
+Load Control: Determines the number of processes that will be resident in main memory
+Load Control: Multiprogramming level
+Load Control: Critical in effective memory management
+Load Control: Too few processes, many occasions when all processes will be blocked and much time will be spent in swapping
+Load Control: Too many processes will lead to thrashing
+Thrashing: As the multiprogramming level increases from a small value, processor utilization rise as there is less chance that all resident processes are blocked
+Thrashing: As the multiprogramming level increases from a small value, a point will be reached at which the average resident set is inadequate
+Thrashing: As the multiprogramming level increases from a small value, the number of page faults rises dramatically, and processor utilization collapses
+Process Suspension: If the degree of multiprogramming is to be reduced, one or more of the currently resident processes must be swapped out
+Six possibilities of Process Suspension: Lowest-priority process, Faulting process, Last process activated, Process with the smallest resident set, Largest process, Process with the largest remaining execution window

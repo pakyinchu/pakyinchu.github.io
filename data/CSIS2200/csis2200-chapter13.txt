@@ -1,0 +1,127 @@
+Artificial Intelligence are related technologies that try to simulate and reproduce human thought behavior
+Artificial intelligence (AI) technologies apply computers to areas that require knowledge, perception, reasoning, understanding, and cognitive abilities 
+Artificial Intelligence concerned with generating and displaying knowledge and facts
+AI used in two types of decision-making analyses: What-is analysis and What-if analysis
+What-is analysis is used in transaction-processing systems and management information systems
+What-if analysis is used in decision support systems and to answer questions such as why, what it means, what should be done, and when should it be done
+In the field of Energy, Neural networks are used to help pinpoint oil and gas deposits
+In the field of Government, softwares are used to read tax returns and spot fraud
+In the field of human services, expert systems are used to decide if applicants should receive welfare benefits
+In the field of marketing, neural networks are used to determine most likely buyers from a long list
+in the field of telecommunications, heuristic search is used for a scheduling application that provides work schedules for more than 20,000 engineers
+In the field of transportation, expert systems used to schedule the routine maintenance of airplanes
+In the field of inventory/forecasting, Neural networks and expert systems are used to reduce delivery time by 20 percent and increase inventory turnover from 3 to 3.4 in Hyundai Motors
+In the field of inventory/forecasting, Neural networks and expert systems used to reduce on-hand inventory by 15 percent, resulting in $180 million in annual savings in SCI Systems
+In the field of inventory/forecasting, Neural networks and expert systems used to reduce forecasting errors by 2 percent, resulting in an inventory reduction of 1 million pounds in Reynolds Aluminum
+In the field of inventory/forecasting, Neural networks and expert systems used to reduce forecasting errors from 40 percent to 25 percent, resulting in a multimillion-dollar savings in Unilever
+Robots are most successful application of AI
+Robots excel at performing simple, repetitive tasks
+Robots free workers from tedious or hazardous jobs
+Robots typically have limited mobility and some have limited vision
+Example of a robot with advanced mobility and vision: Honda’s ASIMO
+Robots are controlled by a computer program that includes commands: Variable Assembly Language (VAL), Functional Robotics (FROB), A Manufacturing Language (AML)
+Personal robots have limited mobility, vision, and speech capabilities and they are often used as prototypes to test certain services
+Advantages of robots in the workplace includes: no interpersonal or personnel issues, consistency and they can function in dangerous environments
+Soft robots are simpler to make and cost less
+Typical applications of soft robots: High-speed food handling, Precise pick and place, Adaptive grasping, Warehouse logistics, Advanced assembly, Medical field
+Expert Systems are programs that mimic human expertise in a specific area human experts have solved successfully
+To be successful, Expert Systems must be applied to tasks that human experts have already handled
+Tasks in medicine, geology, education, and oil exploration are areas of Expert Systems application
+Expert systems are also used in search engines to better understand users’ queries
+Expert systems works with heuristic data, which encourages applying knowledge based on experience to find a solution to a problem
+One of the Components of an Expert System is Knowledge acquisition facility 
+Knowledge acquisition facility is software package with manual or automated methods for acquiring and incorporating new rules and facts 
+Knowledge acquisition facility enables growth of an expert system
+One of the Components of an Expert System is Knowledge base
+Knowledge base is similar to a database but in addition to storing facts and figures, it also keeps track of associated rules and explanations
+Knowledge base includes Factual knowledge, Heuristic knowledge, and Meta-knowledge
+One of the Components of an Expert System is Knowledge base management system (KBMS)
+Knowledge base management system (KBMS) is similar to a DBMS, and it is used to keep the knowledge base updated, with changes to facts, figures, and rules
+KBMS user interface provides user-friendly access to the expert system
+Explanation facility explains to end users how recommendations are derived
+One of the Components of an Expert System is Inference engine
+Inference engine is similar to the model base component
+Inference engine Uses techniques such as forward and backward chaining to manipulate a series of rules
+Forward chaining performs a series of “if-then-else” condition pairs
+Backward chaining starts with the goal and backtracks to find the right solution
+Use of Expert Systems includes Airline industry, Forensics lab work, Banking and finance, Education, Agriculture and food industry, Personnel management, Security and U.S. government
+Extensive human expertise is needed but a single human cannot tackle problem alone
+Criteria for Using Expert Systems includes necessary expertise can be represented as rules or heuristics
+Criteria for Using Expert Systems includes decision or task has already been handled successfully by human experts
+Criteria for Using Expert Systems includes requiring consistency and standardization
+Criteria for Using Expert Systems includes subject domain is limited because experts in the organization are scarce
+Criteria for Not Using Expert Systems includes presence of too few or too many rules
+Criteria for Not Using Expert Systems includes involves well-structured numerical problems that don’t require an expert system
+Criteria for Not Using Expert Systems includes involves a broad range of topics but not many rules
+Criteria for Not Using Expert Systems includes involves disagreement among experts
+Criteria for Not Using Expert Systems includes involves requires human expertise
+Never become distracted, forgetful, or tired is one of the advantages of Expert Systems
+Duplicate and preserve expertise of scarce experts is one of the advantages of Expert Systems
+Preserve expertise of employees who are retiring or leaving is one of the advantages of Expert Systems
+Create consistency in decision making is one of the advantages of Expert Systems
+Improve decision-making skills of nonexperts is one of the advantages of Expert Systems
+Case-based reasoning (CBR) is a problem-solving technique 
+Case-based reasoning (CBR) matches a new case with a previously solved case and its solution, both stored in a database
+Case-based reasoning (CBR) offers a solution after searching for a match
+A human expert is required to solve the problem if CBR fails to find a match
+Design and implementation of Case-Based Reasoning involves four Rs: Retrieve, Reuse, Revise, Retain
+Intelligent agents are softwares capable of reasoning and following rule-based processes
+Intelligent agents are popular in e-commerce
+Other names for intelligent agents are Bots, Virtual agents (VAs), and Intelligent virtual agents (IVAs)
+Characteristics of intelligent agents are Adaptability, Autonomy, Collaborative behavior, Humanlike interface, Mobility, Reactivity
+Web marketing is an application of intelligent agents, which collect information about customers and use it to better market products and services
+Virtual catalogs is an application of intelligent agents, which uses smart or interactive catalogs that displays product descriptions based on customers’ previous experiences and preferences
+Shopping and information agents is an application of intelligent agents which helps users navigate through vast resources available on the Web and provide better results in finding information
+Shopping and information agents serve as search engines, site reminders, or personal surfing assistants
+Personal agents is an application of intelligent agents, which perform specific tasks for a user, such as remembering information for filling out Web forms
+Data mining agents is an application of intelligent agents that works with a data warehouse
+Data mining agents detect trends and discover information and relationships among data items that were not readily apparent
+Monitoring and surveillance agents track and report on computer equipment and network systems to predict when a system crash or failure might occur
+Fuzzy logic allows a smooth, gradual transition between human and computer vocabularies
+Fuzzy logic deals with variations in linguistic terms by using a degree of membership in a set
+Fuzzy logic is designed to help computers simulate vagueness and uncertainty in common situations
+Fuzzy logic allows computers to reason similarly to humans
+Fuzzy logic is used in several areas: Search engines, Chip design, Database management systems, Software development, Appliances
+Machine Learning is process and procedure by which knowledge is gained through experience
+Machine Learning is used in social media and identifying faces in photos
+Machine Learning is used in recognizing commands spoken into smartphones
+Machine Learning is used in designing intelligent robots
+Machine Learning is used in artificial neural networks (ANNs)
+Artificial neural networks (ANNs) learn and are capable of performing tasks difficult with conventional computers
+Artificial neural networks (ANNs) is used for poorly structured problems
+Artificial neural networks (ANNs) cannot supply an explanation for the solution
+Artificial neural networks (ANNs) use patterns instead of the if-then-else rules used by expert systems
+Artificial neural networks (ANNs) create a model based on input and output
+Tasks that involve the use of ANNs: Bankruptcy prediction, Credit rating, Investment analysis, Oil and gas exploration, Target marketing, computer and network security
+Genetic algorithms is a form of AI mainly used to find solutions to optimization and search problems
+Genetic Algorithms are algorithms that mimic the process of natural evolution
+Genetic Algorithms generate solutions to optimization
+Genetic Algorithms find the combination of inputs that generates the most desirable outputs
+Genetic Algorithms examine search problems using mutation, selection, crossover, and chromosome techniques
+Natural-Language Processing is developed so that users can communicate with computers in human language
+Natural-Language Processing provides a question-and-answer setting that is natural and easier for people to use
+Natural-Language Processing is useful with databases
+Complexity of the human language renders the development of NLP systems difficult
+Categories of NLP: Interface to databases, Machine translation, Text scanning and intelligent indexing programs
+Categories of NLP: Generating text for automated production of standard documents, Speech systems for voice interaction with computers 
+Activities performed by NLP : Interfacing and Knowledge acquisition
+NLP Interfacing means accepting human language as input, carrying out the corresponding command, and generating the necessary output
+NLP Knowledge acquistion is done using the computer to read large amounts of text, understand the information, and summarize important points
+AI-related technologies can improve the quality of decision support systems (DSSs) which result in integrated or intelligent DSSs (IDSSs)
+Intelligent DSSs (IDSSs) add explanation capabilities by integrating expert systems
+Intelligent DSSs (IDSSs) add learning capabilities by integrating ANNs
+Intelligent DSSs (IDSSs) create a user-friendly interface by integrating an NLP system
+Adding deductive reasoning to traditional DBMS functions is a benefit of integrating expert systems into the database component of a DSS 
+Improving access speed and database creation and maintenance is a benefit of integrating expert systems into the database component of a DSS
+Adding capability to handle uncertainty and fuzzy data is a benefit of integrating expert systems into the database component of a DSS
+Simplifying query operations is a benefit of integrating expert systems into the database component of a DSS
+Contextual Computing is computing environment that is always present
+Contextual Computing is capable of offering recommendations based on who we are, where we are, and whom we are with
+New app in development adds capability to perceive a user’s mood through analysis of phone calls, text messages, and internet access
+Contextual Computing is based on the principle that computers can both sense and react to their environments
+Robotic process automation (RPA) refers to the process of automated machines taking over everyday human tasks, such as cooking and checking inventory.
+As RPA grows, corresponding human jobs are eliminated leading to unemployment concerns.
+However, the resulting economic growth from RPA is expected to provide new employment opportunities for workers who are displaced by RPA.
+Before implementing an AI system, organizations should establish an ethical framework that defines the AI goals, the complexity of the problem, the environment as being stable or variable, bias and guard against it, and the level of human involvement
+Five major issues of AI: AI bias, AI mistakes, Wealth inequality, Impact on humanity, Impact on unemployment
+Widespread adoption of AI technology raises major issues, including: AI bias, AI mistakes, Wealth inequality, Impact on humanity and human behavior, Impact on unemployment

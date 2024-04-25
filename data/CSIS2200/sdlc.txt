@@ -1,0 +1,13 @@
+System Development Life cycle (SLDC) is a multistep, iterative process, structured in a methodical way
+This process is used to model or provide a framework for technical and non-technical activities to deliver a quality system which meets or exceeds a business's expectations or manage decision-making progression.
+Step 1 Planning: The purpose of this first phase is to find out the scope of the problem and determine solutions.
+Resources, costs, time, benefits and other items should be considered here
+Step 2 Systems Analysis & Requirements: The second phase is where teams consider the functional requirements of the project or solution.
+It's also where system analysis takes place - or analyzing the needs of the end users to ensure the new system can meet their expectations
+Step 3 Systems Design: The third phase describes, in details, the necessary specifications, features and operations that will satisfy the functional requirements of the proposed system which will be in place
+Step 4 Development: Now the real work begins! The development phase marks the end of the initial section of t he process
+Additionally, this phase signifies the start of production
+The development stage is also characterized by instilation & change
+Step 5 Integration & Test: This phase involves systems integration and system testing (of programs and procedures)-normally carried out by a Quality Assurance (QA) professional-to determine if the proposed design meets the initial set of business goals
+Step 6 Implementation: The sixth phase is when the majority oof the code for the program is written, and when the project is put into production by moving the data and components from the old system and placing t hem in the new system via a direct cutover
+Step 7 Operations & Maintenance: The last phase is when end users can fine-tune the system, if they wish, to boost performance, add new capabilities or meet additional user requirements

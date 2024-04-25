@@ -1,0 +1,163 @@
+Enterprise system is an application used in all the functions of a business 
+Enterprise system supports decision making throughout the organization
+Cloud-based enterprise systems are replacing traditional enterprise systems
+Enterprise resource planning system is used to coordinate operations, resources, and decision making among manufacturing, production, marketing, and human resources
+Supply chain is integrated network consisting of an organization, its suppliers, transportation companies, and brokers 
+Supply chain is used to deliver goods and services to customers
+Supply chain management (SCM) is the process of working with suppliers and other partners in the supply chain
+Supply chain management (SCM) aim is to improve procedures for delivering products and services
+SCM coordinates several functions including Procuring materials, Transforming materials into intermediate and finished products or services, Distributing finished goods to customers
+Communication in a firm’s SCM system takes place among product flow, information flow, and finances flow
+Key decisions in SCM related to manufacturing: Location, inventory, production, and transportation
+Green logistics and green SCM includes all SCM activities while minimizing environmental impact
+Green logistics and green SCM is a growing trend 
+Major tools in implementing an SCM system include Information technologies and The Internet 
+Electronic Data Interchange	enables business partners to exchange information on business transactions 	
+Electronic Data Interchange expedites the delivery of accurate information
+Traditional EDI uses proprietary protocols and networks to transmit documents
+In traditional EDI, cost per partner is higher when the number of partners is small
+In traditional EDI has reduced in popularity
+Web-based EDI or Open EDI uses the Internet and Web protocols to transmit documents
+Web-based EDI or Open EDI lowers cost of transmitting documents 
+Web-based EDI or Open EDI are platform independent and easy to use
+Internet-Enabled SCM improves information sharing throughout the supply chain	
+Internet-Enabled SCM reduces costs for information transmission and improves customer service 
+Internet-Enabled SCM improves several SCM activities: Purchasing, procurement and scheduling, Inventory management, Transportation, Order processing and customer service, Production scheduling
+E-Marketplaces third-party exchange (B2B model) provides a platform for buyers and sellers to interact and trade more efficiently online 
+E-Marketplaces third-party exchange (B2B model) helps maintain a competitive edge by providing opportunities for partnerships 
+E-Marketplaces third-party exchange (B2B model) helps maintain a competitive edge by offering a single platform and reduces costs
+E-Marketplaces third-party exchange (B2B model) helps maintain a competitive edge by solving international time-constraint problems
+E-Marketplaces third-party exchange (B2B model) helps maintain a competitive edge by making it easy to compare prices and products
+E-Marketplaces third-party exchange (B2B model) helps maintain a competitive edge by reducing marketing costs
+An e-distributor is an e-marketplace owned and operated by a third party that provides:	Electronic catalog of products, Maintenance, repair, and operations (MROs) services
+An e-distributor is an e-marketplace owned and operated by a third party that provides: Fast delivery of a wide selection of products and services at lower prices
+An e-distributor is an e-marketplace owned and operated by a third party that provides: Assistance for companies to reduce the time and expense of searching for goods
+Online Auctions bring traditional auctions to customers around the globe
+Online Auctions make it possible to sell far more goods and services than at a traditional auction 
+Online Auctions are based on the brokerage business model
+Online Auctions are cost-effective for selling excessive inventory
+In reverse auctions, sellers submit bids and exhibits a one-to-many relationship
+Collaborative Planning, Forecasting, and Replenishment is used to coordinate supply chain members through point-of-sale (POS) data sharing and joint planning 	
+Goal of Collaborative Planning, Forecasting, and Replenishment is to improve operational efficiency and manage inventory
+Advantage of Collaborative Planning, Forecasting, and Replenishment: Decreases merchandising, inventory, and logistics costs for all supply chain members
+Challenge of Collaborative Planning, Forecasting, and Replenishment: Coordinating supply chain can be difficult 
+Collaboration is the agreement between all supply chain partners that establishes how: Data is shared, Problems with overstock are solved, Costs are shared or minimized
+Exception management is the planning for handling unforeseen problems
+With Exception management, lessons learned can be used in future planning
+3D Printing	AKA additive manufacturing is the making of an object from a three-dimensional digital model
+3D Printing significant reduces manufacturing times
+3D Printing improves effectiveness in meeting customer demands
+3D Printing eliminates the need to carry inventory 
+3D Printing enables quicker delivery of designs to market 
+3D Printing imrpoves efficiency in use of materials 
+4D Printing is based on 3D printing	
+4D Printing is able to prompt the printed object to change in response to external factors
+4D Printing can change shape and structure based on temperature, light, and other stimuli
+4D Printing is able to self-assemble and reshape themselves
+4D Printing is popular applications in aerospace, defence, medical, automotive, and consumer goods
+Drones are specialized robots designed to fly and perform certain automated tasks 	
+Drones are available in various shapes and sizes
+Drones vary in sophistication 
+Drones are used to count, carry, and deliver inventory in warehousing
+Drones are used in last-mile delivery of groceries, clothing, medications
+Drones are used to supervise animals and treat crops in agriculture 
+Drones are used in performing maintenance tasks in dangerous environments 
+Drones are used in inspecting infrastructure and insurance claims
+The number of IoT devices continues to grow	
+Internet of Things (IoTs) helps convert reactive process to a proactive process
+Internet of Things (IoTs) helps achieve several SCM goals
+Internet of Things (IoTs) reduces inventory loss in warehouses or in transit 
+Internet of Things (IoTs) reduces fuel costs 
+Internet of Things (IoTs) ensures temperature stability during product transit
+Internet of Things (IoTs) manages warehouse inventory for out-of-stock inventory 
+Internet of Things (IoTs) improves customer service and gathers BI on product usage 
+Radio Frequency Identification tag provides unique identification for card or object carrying it	
+Radio Frequency Identification does not require contact with the scanner, can be read at a distance
+There are two types of RFID tags: passive tags have no internal power supply and active tags have internal power supply
+Radio Frequency Identification is applied in tracking and identification, payment, access control, anti-counterfeiting, and health care
+Radio Frequency Identification disadvantages include security and privacy issues, jamming, difficulty in removing
+Quick Response (QR) Codes are matrix barcode with large storage capacity than standard UPC codes.	
+Quick Response (QR) Codes are popularized as a marketing tool
+Quick Response (QR) Codes has high capacity, small in size, dirt resistance, omni-directional readability, Japanese character set compatibility.
+Global Supply Chain Management incorporates management processes around the world to integrate suppliers, manufacturers, warehouses, and retails outlets	
+Global Supply Chain Management requires global flow of information, materials, and finances throughout chain
+Benefits of Global Supply Chain Management: Expanded sourcing opportunities, increased markets, extended growth opportunities
+Drawbacks of Global Supply Chain Management: Inventory and distribution issues, high risks, global competition, information collection, legal complexity
+Customer Relationship Management (CRM) is the processes a company uses to track and organize its contacts with customers	
+Goal of Customer Relationship Management (CRM) is to improve services offered to customers
+Customer Relationship Management (CRM) uses customer contact information for targeted marketing
+Customer Relationship Management (CRM) helps organizations make better use of data, information, and knowledge to understand customers 
+Customer Relationship Management (CRM) marketing strategies focus on long-term relationships and include:	
+Customer Relationship Management (CRM) marketing strategies include identifying customer segments and a company’s profitable and loyal customers
+Customer Relationship Management (CRM) marketing strategies include improving products to meet customer needs and customer retention
+Customer Relationship Management (CRM) provides a complete picture of an organization’s customers
+Customer Relationship Management (CRM) can perform complex analysis of customer data
+Activities in a CRM System: Sales automation, Order processing, Marketing automation, Customer support, Knowledge management, Personalization technology
+CRM Applications are implemented with one of two approaches: On-premises CRM, Web-based CRM 
+Software packages available for setting up a CRM system: Amdocs CRM, Optima Technologies ExSellence, Infor CRM, SAP CRM, and Oracle CRM
+Features of CRM packages: Salesforce automation, eCRM or Web-based CRM, Survey management, Automated customer service
+Personalization is the process of satisfying customers’ needs, building customer relationships, and increasing profits 
+Personalization is achieved by designing goods and services that meet customers’ preferences better
+Customization allows customers to modify the standard offering
+Example of Customization: selecting a different home page to be displayed each time the Web browser is opened
+Personalization Technology requires gathering customer information which may affect customers’ sense of privacy 
+Implementation of Personalization Technology requires: Internet and databases, Data warehouse/data marts, Data-mining tools, Mobile networks, Collaborative filtering (CF)
+Collaborative Filtering (CF) search for specific information or patterns using input from multiple business partners and data sources
+Collaborative Filtering (CF) identifies groups of people based on common interests and recommends products
+Collaborative Filtering (CF) works well for a single product category
+Collaborative filtering drawbacks is the needs of a large sample of users and content to work well
+Collaborative filtering drawbacks is the failure to make recommendations across unrelated categories
+An application of Collaborative filtering is making automatic predictions about customer preferences based on similar users
+Knowledge Management (KM) is a technique used to improve CRM systems	
+Knowledge Management (KM) is used in identifying, storing, and disseminating “know-how”— facts about how to perform tasks
+Knowledge Management (KM) is draws on concepts of organizational learning, culture, and best practices to convert tacit knowledge into explicit knowledge
+Knowledge Management (KM) is draws on concepts of organizational learning, culture, and best practices to create a knowledge-sharing culture in an organization
+Knowledge Management (KM) is draws on concepts of organizational learning, culture, and best practices to eliminate obstacles to sharing knowledge
+Knowledge repository can be created by storing knowledge captured from experts 	
+Knowledge repository can be accessed by employees when needed and used when new products are designed 
+Knowledge repository tracks how often an employee participates in knowledge-sharing interactions 
+Knowledge repository can be used to reward employees 
+Knowledge Management (KM) tools and technologies include groupware to create, manage, and distribute documents in an organization 
+Knowledge Management (KM) tools and technologies include DBMSs and data-mining tools
+Knowledge Management (KM) tools and technologies include decision support systems
+Knowledge Management (KM) contributions to an organization by promoting innovation
+Knowledge Management (KM) contributions to an organization by reducing response time and improves customer service
+Knowledge Management (KM) contributions to an organization by increasing revenue by reducing delivery time
+Knowledge Management (KM) contributions to an organization by improving employee retention by rewarding knowledge 
+Chief knowledge officer (CKO) ensures knowledge resources are collected, stored, and disseminated among key decision makers
+Chief knowledge officer (CKO) ensures organization profits from knowledge resources
+Chief knowledge officer (CKO) ensures return on investment (ROI) is maximized 
+Enterprise Resource Planning (ERP) is integrated planning system that collects and processes data 
+Enterprise Resource Planning (ERP) is integrated planning system that manages and coordinates resources, information, and functions 
+Enterprise Resource Planning (ERP) is integrated planning system that includes hardware, software, procedures, and input from all functional areas
+Enterprise Resource Planning (ERP) is integrated planning system that use a unified database to store data for various functions
+ERP Components of Purchasing provides information related to the purchasing function, including e-procurement 
+ERP Components of Accounting tracks financial information, such as budget allocations and debits and credits 
+ERP Components of vendor integration integrates information for vendors, such as offering automated downloads of data on product pricing, specifications, and availability 
+ERP Components of E-commerce provides B2C information related to order status and B2B information related to suppliers and business partners 
+ERP Components of Sales provides information on sales and marketing 
+ERP Components of unified database collects and analyzes relevant internal and external data and information needed by other functions 
+ERP Components of inventory management provides inventory status and inventory forecasts 
+ERP Components of supply chain provides information on supply chain members, including suppliers, manufacturing, distribution, and customers 
+ERP Components of manufacturing provides information on production costs and pricing 
+ERP Components of human resources provides information on assessing job candidates, scheduling and assigning employees, and predicting future personnel needs 
+ERP Components of CRM provides information on customers and their needs and preferences 
+Enterprise Resource Planning (ERP)	• Benefits of a well-designed ERP system 	
+A benefit of a well-designed ERP system is increased availability and timeliness of integrated information 
+A benefit of a well-designed ERP system is increased data accuracy and response time 
+A benefit of a well-designed ERP system is improved customer and employee satisfaction, planning and scheduling, supplier relationship
+A benefit of a well-designed ERP system is improved reliability of information 
+A benefit of a well-designed ERP system is reduced inventory costs, labor costs, and order-to-fulfillment time 
+One of the Enterprise Resource Planning (ERP) drawbacks is high cost
+One of the Enterprise Resource Planning (ERP) drawbacks is difficulties in installation
+One of the Enterprise Resource Planning (ERP) drawbacks is the need for extensive training
+One of the Enterprise Resource Planning (ERP) drawbacks is the compatibility problems with legacy systems
+Enterprise Resource Planning (ERP) is available as modules so organizations can purchase only required components and keeps costs down
+Cloud-Based Enterprise Systems are managed by a cloud provider instead of on premise	
+Advantages of Cloud-Based Enterprise Systems: Lower cost, paid incrementally, Increased storage, highly automated, Increased flexibility, scalability, mobility, Frees up in-house IT resources, Improved security
+Challenges of Cloud-Based Enterprise Systems: Lack of customization, Possible downtime, Vendor lock-in
+Supply chains exist in both service and manufacturing organizations	
+CRM systems help organizations make better use of data and knowledge to understand their customers
+KM systems are used to improve efficiency of CRM systems 
+ERP systems use a unified database to store data for various functions
+Cloud-based SCMs, CRMs, and ERPs are popular alternatives to on-premise systems

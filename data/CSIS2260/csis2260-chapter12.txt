@@ -1,0 +1,203 @@
+File Systems provide a means to store data organized as files as well as a collection of functions that can be performed on files
+File Systems maintain a set of attributes associated with the file
+File Systems Typical operations include: Create, Delete, Open, Close, Read, Write
+Field is the basic element of data
+Field contains a single value
+Field is fixed or variable length
+Record is a collection of related fields that can be treated as a unit by some application program
+Record is fixed or variable length
+Database is a collection of related data
+Relationships among elements of data are explicit in database 
+Database is designed for use by a number of different applications
+Database consists of one or more types of files
+File is a collection of similar records
+File is treated as a single entity
+File may be referenced by name
+File is access control restrictions usually apply at the file level
+Each user should be able to create, delete, read, write and modify files
+Each user may have controlled access to other users’ files
+Each user may control what type of accesses are allowed to the users’ files
+Each user should be able to move data between files
+Each user should be able to back up and recover files in case of damage
+Each user should be able to access his or her files by name rather than by numeric identifier
+Device Drivers is the lowest level
+Device Drivers communicate directly with peripheral devices
+Device Drivers are responsible for starting I/O operations on a device
+Device Drivers process the completion of an I/O request
+Device Drivers are considered to be part of the operating system
+Basic File System is also referred to as the physical I/O level
+Basic File System is the primary interface with the environment outside the computer system
+Basic File System deals with blocks of data that are exchanged with disk or tape systems
+Basic File System is concerned with the placement of blocks on the secondary storage device
+Basic File System is concerned with buffering blocks in main memory
+Basic File System does not understand the content of the data or the structure of the files involved
+Basic File System is considered part of the operating system
+Logical I/O enables users and applications to access records
+Logical I/O provides general purpose record I/O capability 
+Logical I/O maintains basic data about file
+The level of the file system closest to the user is oftened termed the Access Method
+Access Method provides a standard interface between applications and the file systems and devices that hold the data
+Different access methods reflect different file structures and different ways of accessing and processing the data
+File organization is the logical structuring of the records as determined by the way in which they are accessed
+In choosing a file organization, several criteria are important: Short access time, Ease of update, Economy of storage, Simple maintenance, Reliability
+Priority of criteria depends on the application that will use the file
+Five of the common file organizations are: The indexed file, The direct, or hashed, file, The pile, The sequential file, The indexed sequential file
+The pile file organization type is the least complicated form of file organization
+With the pile file organization type, the data are collected in the order they arrive
+With the pile file organization type, each record consists of one burst of data
+With the pile file organization type, purpose is simply to accumulate the mass of data and save it
+With the pile file organization type, record access is by exhaustive search
+The pile file organization type: variable-length records, variable set of fields, chronological order
+The most common form of file structure is the sequential file organization type
+A fixed format is used for records with the sequential file organization type
+With the sequential file organization type, key field uniquely identifies the record
+The sequential file organization type is typically used in batch applications
+With the sequential file organization type, new records are usually stored in a separate file, called log file
+With the sequential file organization type, periodically, the log file is merged with the master file
+The sequential file organization type: Fixed-length records, Fixed set of fields in fixed order, Sequential order based on key field
+The Indexed Sequential file organization type adds an index to the file to support random access
+With the Indexed Sequential file organization type, Index is searched to find the highest key value that is equal to or precedes the desired key value
+The Indexed Sequential file organization type adds an overflow file for new records
+The Indexed Sequential file organization type greatly reduces the time required to access a single record
+With the Indexed Sequential file organization type, multiple levels of indexing can be used to provide greater efficiency in access
+With Indexed Sequential file organization type, for a single level indexing, each record in the index file consists of two fields: a key field and a pointer into the main file
+With Indexed Sequential file organization type, to find a specific field, the index is searched to find the highest key value that is equal to or precedes the desired key value
+With Indexed Sequential file organization type, the search continues in the main file at the location indicated by the pointer
+For a sequential file with 1 million records, with Indexed Sequential file organization type Without index, to search for a particular key value will require on average 500000 record accesses
+With Indexed Sequential file organization type, it will take on average 500 accesses to the index file followed by 500 accesses to the main file to find the record, for an index with 1000 entries with the keys in the index more or less evenly distributed over the main file
+For a sequenstial file with 1 million records, with multiple levels of indexing, the average length of search has been reduced from 500000 to 1000 to 150, where the lower-level index has 10000 entries and higher-level index has 100 entries
+With multiple levels of indexing, the search begins at the higher-level index (average length = 50 accesses) to find an entry point into the lower-level index, this index is then searched (average length = 50) to find an entry point into the main file, which is then searched (average length = 50). 
+With indexed file, records are accessed only through their indexes 
+With indexed file, variable-length records can be employed
+With indexed file, some records may not contain all fields
+With indexed file, exhaustive index contains one entry for every record in the main file
+With indexed file, partial index contains entries to records where the field of interest exists
+Indexed file is used mostly in applications where timeliness of information is critical, examples would be airline reservation systems and inventory control systems
+With direct or hashed File, any block of a known address can be access directly
+Direct or Hashed File makes use of hashing on the key value
+Direct or Hashed File is often used where: Very rapid access is required, Fixed-length records are used, Records are always accessed one at a time
+Direct or Hashed File Examples are: Directories, Pricing tables, Schedules, Name lists
+Basic Information: File Name, File Type, File Organization
+File Name is the Name as chosen by creator (user or program). Must be unique within a specific directory.
+File Type examples: text, binary, load module, etc.
+File Organization for systems that support different organizations
+Address Information: Volume, Starting Address, Size Used, Size Allocated
+Volume indicates device on which file is stored
+Starting Address is the starting physical address on secondary storage (e.g., cylinder, track, and block number on disk)
+Size Used is the current size of the file in bytes, words, or blocks
+Size Allocated is the maximum size of the file
+Access Control Information: Owner, Access Information, Permitted Actions
+Owner is the user who is assigned control of this file. The owner may be able to grant/deny access to other users and to change these privileges
+A simple version of the Access Information element would include the user’s name and password for each authorized user
+Permitted Actions control reading, writing, executing transmitting over a network
+Usage Information: Date Created, Identity of Creator, Date Last Read Access, x
+Date Created is when file was first placed in directory
+Identity of Creator is usually but not necessarily the current owner
+Date Last Read Access is the date of the last time a record was read
+Identity Of Last Reader is the User who did the reading
+Date Last Modified is the Date of the last update insertion or deletion
+Identity Of Last Modifier is the User who did the modifying
+Date Of Last Backup	Date of the last time the file was backed up on another storage medium
+Current Usage is information about current activity on the file, such as process or processes that have the file open, whether it is locked by a process, and whether the file has been updated in main memory but not yet on disk
+To understand the requirements for a file structure, it is helpful to consider the types of operations that may be performed on the directory
+Operations Performed on a Directory: Search, Create files, Delete files, List directory, Update directory
+In a Two-Level Scheme, there is one directory for each user and a master directory
+In a Two-Level Scheme, Master directory has an entry for each user directory providing address and access control information
+In a Two-Level Scheme, each user directory is a simple list of the files of that user
+In a Two-Level Scheme, names must be unique only within the collection of files of a single user
+In a Two-Level Scheme, file system can easily enforce access restriction on directories
+Two issues arise when allowing files to be shared among a number of users: Access rights, Management of simultaneous access
+Access Rights None: The user would not be allowed to read the user directory that includes the file
+Access Rights Knowledge: The user can determine that the file exists and who its owner is and can then petition the owner for additional access rights
+Access Rights Execution: The user can load and execute a program but cannot copy it
+Access Rights Reading: The user can read the file for any purpose, including copying and execution
+Access Rights Appending: The user can add data to the file but cannot modify or delete any of the file’s contents
+Access Rights Updating: The user can modify, delete, and add to the file’s data
+Access Rights Changing protection: The user can change the access rights granted to other users
+Access Rights Deletion: The user can delete the file from the file system
+User Access Rights - Owner is usually the initial creator of the file
+User Access Rights - Owner has full rights
+User Access Rights - Owner may grant rights to others
+User Access Rights - Specific Users are individual users who are designated by user ID
+User Access Rights - User Groups are a set of users who are not individually defined
+User Access Rights - All means all users who have access to this system or these are public files
+Record Blocking - Blocks are the unit of I/O with secondary storage
+Record Blocking - For I/O to be performed records must be organized as blocks
+Record Blocking - Blocks are mostly of fixed length which simplifies I/O and buffer allocation
+Record Blocking - Given the size of a block, three methods of blocking can be used: Fixed-Length Blocking, Variable-Length Spanned Blocking, Variable-Length Unspanned Blocking
+Record Blocking - Fixed-Length Blocking - fixed length records are used, and an integral number of records are stored in a block
+Record Blocking - Fixed-Length Blocking - Internal fragmentation - unused space at the end of each block
+Record Blocking - Variable-Length Spanned Blocking - variable-length records are used and are packed into blocks with no unused space
+Record Blocking - Variable-Length Unspanned Blocking - variable-length records are used, but spanning is not employed
+File Allocation - On secondary storage, a file consists of a collection of blocks
+File Allocation - The operating system or file management system is responsible for allocating blocks to files
+File Allocation - The approach taken for file allocation may influence the approach taken for free space management
+File Allocation - Space is allocated to a file as one or more portions (contiguous set of allocated blocks)
+File Allocation - File allocation table (FAT) is a data structure used to keep track of the portions assigned to a file
+A preallocation policy requires that the maximum size of a file be declared at the time of the file creation request
+For many applications it is difficult to estimate reliably the maximum potential size of the file
+preallocation tends to be wasteful because users and application programmers tend to overestimate size
+Dynamic allocation allocates space to a file in portions as needed
+In choosing a portion size there is a trade-off between efficiency from the point of view of a single file versus overall system efficiency
+Portion size - Items to be considered: Contiguity of space increases performance, especially for Retrieve_Next operations, and greatly for transactions running in a transaction-oriented operating system
+Portion size - Items to be considered: Having a large number of small portions increases the size of tables needed to manage the allocation information
+Portion size - Items to be considered: Having fixed-size portions simplifies the reallocation of space
+Portion size - Items to be considered: Having variable-size or small fixed-size portions minimizes waste of unused storage due to overallocation
+Variable, large contiguous portions provides better performance
+Variable, large contiguous portions - The variable size avoids waste
+Variable, large contiguous portions - The file allocation tables are small
+Blocks - Small fixed portions provide greater flexibility 
+Blocks - They may require large tables or complex structures for their allocation
+Blocks - Contiguity has been abandoned as a primary goal
+Blocks are allocated as needed
+Contiguous File Allocation - A single contiguous set of blocks is allocated to a file at the time of file creation
+Contiguous File Allocation - Preallocation strategy using variable-size portions
+Contiguous File Allocation - FAT needs only a single entry for each file
+Contiguous File Allocation - Is the best from the point of view of the individual sequential file
+Contiguous File Allocation - External fragmentation - require compaction
+Chained Allocation - Allocation is on an individual block basis 
+Chained Allocation - Each block contains a pointer to the next block in the chain
+Chained Allocation - The file allocation table needs just a single entry for each file
+Chained Allocation - No external fragmentation to worry about
+Chained Allocation - Best for sequential files
+Chained Allocation - To select an individual block requires tracing through the chain to the desired block
+Indexed Allocation with Block Portions - Allocation is on either fixed-size blocks or variable-size portions
+Indexed Allocation with Block Portions - FAT contains a separate one-level index for each file
+Indexed Allocation with Block Portions - Index has one entry for each portion allocated for the file
+Indexed Allocation with Block Portions - No external fragmentation
+Indexed Allocation with Block Portions - Support both sequential and direct access
+Free Space Management - Just as allocated space must be managed, so must the unallocated space
+Free Space Management - To perform file allocation, it is necessary to know which blocks are available
+Free Space Management - A disk allocation table is needed in addition to a file allocation table
+Bit Tables - This method uses a vector containing one bit for each block on the disk
+Bit Tables - Each entry of a 0 corresponds to a free block, and each 1 corresponds to a block in use
+Bit Tables - Advantages: works well with any file allocation method
+Bit Tables - Advantages: it is as small as possible
+Bit Tables - Disadvantages: Exhaustive search of the table can slow file system performance
+Chained Free Portions - The free portions may be chained together by using a pointer and length value in each free portion
+Chained Free Portions - Negligible space overhead because there is no need for a disk allocation table
+Chained Free Portions - Suited to all file allocation methods
+Chained Free Portions - Disadvantages: Leads to fragmentation, many portions will be a single block long
+Chained Free Portions - Disadvantages: Every time you allocate a block you need to read the block first to recover the pointer to the new first free block before writing data to that block
+Indexing - Treats free space as a file and uses an index table as it would for file allocation
+Indexing - For efficiency, the index should be on the basis of variable-size portions rather than blocks
+Indexing - This approach provides efficient support for all of the file allocation methods
+Volumes is a collection of addressable sectors in secondary memory that an OS or application can use for data storage
+Volumes - the sectors in a volume need not be consecutive on a physical storage device, they need only appear that way to the OS or application 
+A volume may be the result of assembling and merging smaller volumes
+In the simplest case, a single disk equals one volume
+If a disk is divided into partitions, each partition functioning as a separate volume
+Multiple disks can also be treated as a single volume or partitions on multiple disks as a single volume.
+The basic elements of Access Matrix are: subject, object, access right
+Access Matrix subject – an entity capable of accessing objects, a process that represents a user or application
+Access Matrix object – anything to which access is controlled, E.g. files, program, memory
+Access Matrix access right – the way in which an object is accessed by a subject: Read, Write, Execute
+Access Control Lists - A matrix may be decomposed by columns, yielding access control lists
+Access Control Lists - The access control list lists users and their permitted access rights
+Capability Lists - Decomposition by rows yields capability tickets
+Capability Lists - A capability ticket specifies authorized objects and operations for a user
+All types of UNIX files are administered by the OS by means of inodes
+An inode (index node) is a control structure that contains the key information needed by the operating system for a particular file
+Several file names may be associated with a single inode
+An active inode is associated with exactly one file
+Each file is controlled by exactly one inode

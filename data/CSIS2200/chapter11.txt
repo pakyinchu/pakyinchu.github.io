@@ -1,0 +1,180 @@
+An enterprise system is an application that is used in all the functions of a business and supports decision making throughout the organization
+In fact, an enterprise resource planning system is used to coordinate operations, resources, and decision making among manufacturing, production, marketing, and human resources
+Intranets and Web portals are used by many organizations to improve communication among departments as well as to increase overall efficiency
+Enterprise systems are another way to make important information readily available to decision makers throughout an organization
+An enterprise system is an application used in all the functions of a business and that supports decision making throughout the organization
+A supply chain is an integrated network consisting of an organization, its suppliers, transportation companies, and brokers used to deliver goods and services to customers
+Supply chain management (SCM) is the process of working with suppliers and other partners in the supply chain to improve procedures for delivering products and services
+A supply chain is an integrated network consisting of an organization, its suppliers, transportation companies, and brokers used to deliver goods and services to customers
+In a manufacturing firm’s supply chain, raw materials flow from suppliers to manufacturers (where they are transformed into finished goods), then to distributors, then to retailers, and finally to consumers
+Supply chains exist in both service and manufacturing organizations, although the chain’s complexity can vary widely in different organizations and industries
+In manufacturing, the major links in the supply chain are suppliers, manufacturing facilities, distribution centers, retailers, and customers
+In service organizations—such as those in real estate, the travel industry, temporary labor, and advertising—these links include suppliers (service providers), distribution centers (such as travel agencies), and customers
+Supply chain management (SCM) is the process of working with suppliers and other partners in the supply chain to improve procedures for delivering products and services
+An SCM system coordinates the following functions: Procuring materials (in service organizations, can include resources and information)
+An SCM system coordinates the following functions: Transforming materials into intermediate and finished products or services
+An SCM system coordinates the following functions: Distributing finished products or services to customers
+In a manufacturing firm’s SCM system, communication takes place among the following areas: Product flow, Information flow, Finances flow
+Product flow—Managing the movement of goods all the way from suppliers to customers, including customer service and support
+Information flow—Overseeing order transmissions and delivery status updates throughout the orderprocessing cycle
+Finances flow—Handling credit terms, payment schedules, and consignment and title ownership arrangements
+An SCM system must manage communication in all these areas as part of overseeing the manufacturing process and managing inventory and delivery
+Four key decisions in SCM related to manufacturing are: Location, Inventory, Production, Transportation
+key decisions in SCM related to manufacturing: Location—Where should manufacturing facilities be placed?
+key decisions in SCM related to manufacturing: Inventory—When should an order be placed? How much should be ordered?
+key decisions in SCM related to manufacturing: Production—What should be produced? How much should be produced?
+key decisions in SCM related to manufacturing: Transportation—Which transportation systems will reduce costs and expedite the delivery process?
+In addition, hosting services are now available for SCM systems; this trend is called “software as a service”
+A growing trend in SCM is green logistics and green SCM that includes all SCM activities including manufacturing, packaging, transportation, and warehousing
+Green logistics advocates a type of SCM that minimizes environmental impact, including climate change, air pollution, water pollution, soil degradation, solid waste, noise, vibration, and accidents
+Information technology tools that could assist organizations to achieve their green goals: green computing; management support systems
+Information technology tools that could assist organizations to achieve their green goals: collaborative planning, forecasting, and replenishment (CPFR)
+Information technology tools that could assist organizations to achieve their green goals: 3D and 4D printing; Internet of Things (IoT)
+Information technologies and the Internet play a major role in implementing an SCM system
+Electronic data interchange (EDI) enables business partners to send and receive information on business transactions
+Many companies substitute EDI for printing, mailing, and faxing paper documents, such as purchase orders, invoices, and shipping notices
+By using the Internet and established Web protocols for the electronic exchange of information, companies can improve the efficiency and effectiveness of the supply chain process
+EDI expedites the delivery of accurate information in Transaction acknowledgments
+EDI expedites the delivery of accurate information in Financial reporting
+EDI expedites the delivery of accurate information in Invoice and payment processing
+EDI expedites the delivery of accurate information in Order status
+EDI expedites the delivery of accurate information in Purchasing
+EDI expedites the delivery of accurate information in Shipping and receiving
+EDI expedites the delivery of accurate information in Inventory management and sales forecasting
+In addition, using the Internet and Web protocols for EDI lowers the cost of transmitting documents.
+In addition, using the Internet and Web protocols for EDI lowers the cost of transmitting documents, this method is called Webbased EDI or Open EDI.
+It also has the advantage of being platform independent and easy to use
+Nevertheless, transmitting across the Internet does involve more security risks than traditional EDI, which uses proprietary protocols and networks
+Using EDI does have some drawbacks, for instance, EDI uses proprietary standards
+An EDI provider sets up an EDI network (as a virtual private network [VPN]), and organizations enroll in the network
+EDI is more beneficial when there are more companies in the EDI network because when the number of partners is small, the cost per partner is higher
+Large companies tend to insist on their suppliers and distributors becoming part of the same EDI network, which many small suppliers and distributors cannot afford
+With the advent of eXtensible Markup Language (XML), organizations can use the Internet and Open EDI to perform the same function that EDI performs, so traditional EDI has declined in popularity
+Internet-enabled SCM improves information sharing throughout the supply chain, which helps reduce costs for information transmission and improves customer service
+For instance, many companies use point-ofsale (POS) systems that scan what is being sold and collect this data in real time
+This information helps organizations decide what to reorder to replenish stock, and it is sent via the Internet to suppliers so they can synchronize production with actual sales
+Internet-enabled SCM can improve: Purchasing/procurement—Purchasing and paying for goods and services online, bargaining and renegotiating prices and term agreements, using global procurement strategies
+Internet-enabled SCM can improve: Inventory management—Providing real-time stock information, replenishing stock quickly and efficiently, tracking out-of-stock items
+Internet-enabled SCM can improve: Transportation—Allowing customers to use the Internet for shipping and delivery information
+Internet-enabled SCM can improve: Order processing—Checking order placement and order status, improving the speed and quality of order processing, handling returned goods and out-of-stock notifications to customers
+Internet-enabled SCM can improve: Customer service—Responding to customers’ complaints, issuing notifications (such as product recalls), providing around-the-clock customer service
+Internet-enabled SCM can improve: Production scheduling—Coordinating just-intime (JIT) inventory programs with vendors and suppliers, coordinating production schedules between companies and their vendors and suppliers, conducting customer demand analysis
+An e-marketplace is a third-party exchange (a business-to-business [B2B] business model) that provides a platform for buyers and sellers to interact with each other and trade more efficiently online
+E-marketplaces help businesses maintain a competitive edge in the supply chain in the following ways: Providing opportunities for sellers and buyers to establish new trading partnerships
+E-marketplaces help businesses maintain a competitive edge in the supply chain in the following ways: Providing a single platform for prices, availability, and stock levels that is accessible to all participants
+E-marketplaces help businesses maintain a competitive edge in the supply chain in the following ways: Solving time-constraint problems for international trade and making it possible to conduct business around the clock
+E-marketplaces help businesses maintain a competitive edge in the supply chain in the following ways: Making it easy to compare prices and products from a single source instead of spending time contacting each seller
+E-marketplaces help businesses maintain a competitive edge in the supply chain in the following ways: Reducing marketing costs more than traditional sales channels can
+E-distributors are common examples of e-marketplaces
+An e-distributor is a marketplace owned and operated by a third party that provides an electronic catalog of products
+An e-distributor might offer a catalog containing a variety of hardware and software products so that a network administrator can order all the equipment and applications needed for an organization’s network instead of purchasing components from several different vendors
+Another common offering from e-distributors is maintenance, repair, and operations (MROs) services;
+A company can purchase an MRO package that might include services from different vendors, but the e-distributor coordinates them into one package for customers
+The MRO packaging is an example of a horizontal market, which concentrates on coordinating a business process or function involving multiple vendors
+E-distributors offer fast delivery of a wide selection of products and services, usually at lower prices, and they help companies reduce the time and expense of searching for goods
+third-party exchanges bring together buyers and sellers in vertical as well as horizontal markets
+Buyers can gather information on products and sellers, and sellers have access to more potential buyers
+Auctions help determine the price of goods and services when there is no set price in the marketplace
+An online auction is a straightforward yet revolutionary business concept 
+By using the Internet, it brings traditional auctions to customers around the globe and makes it possible to sell far more goods and services than at a traditional auction
+An online auction is based on the brokerage business model, which brings buyers and sellers together in a virtual marketplace
+Typically, the organization hosting the auction collects transaction fees for the service
+Online auctions are particularly cost-effective for selling excessive inventory
+Some companies use reverse auctions, which invite sellers to submit bids for products and services
+In other words, there is one buyer and many sellers in reverse auctions: a one-to-many relationship
+In reverse auctions, the buyer can choose the seller that offers the service or product at the lowest price
+Collaborative planning, forecasting, and replenishment (CPFR) is used to coordinate supply chain members through point-of-sale (POS) data sharing and joint planning
+In other words, any data collected with POS systems is shared with all members of the supply chain, which is useful in coordinating production and planning for inventory needs
+The goal of CPFR is to improve operational efficiency and manage inventory
+With a structured process of sharing information among supply chain members, retailers can compare customer demands or sales forecasts with a manufacturer’s order forecast
+If there is a discrepancy between forecasts, members can get together and decide on the correct quantity to order
+One main obstacle to improving supply chain performance is companies not knowing enough about what customers want, which can lead to lost sales and unsold inventory for retailers and manufacturers
+CPFR has the advantage of decreasing merchandising, inventory, and logistics costs for all supply chain members
+Coordinating the supply chain can be difficult
+Without agreements in place, most retailers do not share sales and inventory information
+CPFR ensures that inventory and sales data are shared across the supply chain so everyone knows the exact sales and inventory levels
+The collaboration part of CPFR process is the agreement between all supply chain partners that establishes how data is shared, how problems with overstock are solved, and how to ensure that costs for each partner are shared or minimized
+The agreement also encourages retailers to share important data with the distributor and manufacturer, often by offering them better discounts
+Even with an agreement in place, unforeseen problems can crop up, so planning for these “exceptions” is important
+Handling unforeseen problems is called “exception management,” and lessons learned during this process can be used in future planning
+3D printing or additive manufacturing is a process for making a physical object from a three-dimensional digital model
+3D printing is done by laying down many successive thin layers of material
+3D printing growth includes its applications in developing prototypes to end-user products, as well as its deployment in manufacturing to improve efficiency
+3D printers have been around for more than three decades, but their high cost and complexity made them only affordable to large companies for much of that time
+Advances in digital scanners and software technologies have made them accessible and more affordable for smaller organizations
+3D printing offers some of the same advantages of prototyping, such as cost reduction, decreasing risk, improving communication among decision makers, increasing feedback, and personalization of products and services
+3D printing impacts almost all industries, including food, military, electronics, toys, medicine, health care, and automotive
+3D printing printers can make products that even traditional factories are unable to make—including human tissue
+3D printing could also have a positive impact on environmental and sustainability issues by reducing waste, generating longer lifespans for products, reducing transport, and fewer unsold products
+3D printing plays a major role in SCM: Manufacturing lead times will be significantly reduced, from weeks to days to hours and minutes
+3D printing plays a major role in SCM: Customer demand will be met more quickly and more specifically
+3D printing plays a major role in SCM: Manufacturers will print on demand, eliminating the need to carry inventory
+3D printing plays a major role in SCM: New designs will come to market much quicker
+3D printing plays a major role in SCM: Materials will be used more efficiently, as leftovers can be used for other projects
+4D printing is based on 3D printing technology with one significant difference
+4D printing uses special materials and sophisticated designs that are “programmed” to prompt the 3D printed objects to change its shape and structure by the influence of external factors
+4D printing external factors may include temperature, light, or other environmental stimuli
+4D printing will enable companies to manufacture products that can self-assemble, reshape themselves, or otherwise react to changing conditions
+4D printing: Aerospace: to make self-deploying structures for air ventilation, engine cooling, and other similar uses
+4D printing: Defense: to make military uniforms that can alter their camouflage or better protect against poisonous gases or shrapnel on contact
+4D printing: Medical: for tissue engineering and smart biomedical devices and the fabrication of nanoparticles and nanorobots for chemotherapy
+4D printing: Automotive: to produce car components that can adapt to changing environmental conditions
+4D printing: Automotive: car seats that provide adaptive support and comfort or for improving impact performance of airbags
+4D printing: Consumer goods: could be used to make flatpack furniture pieces such as chairs and tables, which would self-assemble when triggered
+A drone is a specialized robot that is designed to fly and perform certain automated tasks
+Drones come in various shapes and sizes, and they vary in sophistication—many drones are used for recreation, but this is changing
+Several companies are using drones in SCM; Walmart uses drones to count inventory in warehouses and is testing drones for indoor operations
+Drones can carry inventory and deliver it to specified locations
+Amazon is opening hundreds of physical stores that could be used as airports for drone delivery fleets
+In agriculture, drones are used to supervise animals and in a dangerous environment, such as oil fields where they can perform maintenance tasks
+Domino’s is testing pizza delivery by drones in New Zealand
+Customers who request a drone delivery will receive a notification when their delivery is getting close to the destination
+The customer goes outside the delivery address and presses a button on his or her smartphone
+At this point the drone will lower the food via a tether
+Once the package is released, the drone pulls the tether back up and flies back to the Domino’s location
+Experts believe drones will play a major role in last-mile logistics and complement traditional logic systems
+With further advancements in autonomous piloting, “sense and aware” technologies, and increased battery life, drones should become an integral part of a modern SCM
+The FAA has not fully finalized safety regulations for commercial applications of drones yet
+As the applications for drones increase, tougher regulations will evolve in order to improve their safe operations
+Drones application in supply chain: Warehousing: drones can fly around large warehouses, distribution centers, and yards reading inventory RFID tags for continuous monitoring of inventory, preventing inventory mismatches, and determining item locations
+Drones application in supply chain: Last-mile delivery: after regulatory approval, drones can be used to deliver groceries, clothing, medications, and other items to certain areas
+Experts believe that the practice will become more common since drones can provide a cheaper and more efficient transport option
+Drones application in supply chain: Farming and agriculture: equipped with sensors, cameras, and GPS, drones can spot areas of insect infestation, areas needing watering, sections needing fertilizer, failing plants
+Drones application in supply chain: Farming and agriculture: allow farmers to specifically target those areas for treatment, improving crop yields with moderate cost
+Drones application in supply chain: Construction: drones can be used for surveying, progress tracking, inspections, security, safety, risk mitigation, and bid processing for bridges, tunnels, towers, factories, power plants, power lines, pipelines, and windfarms
+Drones application in supply chain: Global infrastructure: drones can be used for inspections, monitoring, providing estimates, and handling insurance claims
+IoTs can provide timely information that decision makers can use to improve the effectiveness of their decisions
+IoTs convert a reactive process to a proactive process—a truck driver will be able to avoid a route before getting stuck
+IoTs assists SCM: Reduce loss of inventory in warehouses or products in transit
+IoTs assists SCM: Reduce fuel costs by choosing the best routes and avoiding traffic jams
+IoTs assists SCM: Ensure temperature stability during product transit, particularly for perishable products
+IoTs assists SCM: Manage warehouse inventory for out-of-stock inventory
+IoTs assists SCM: Improve customer service by fast and efficient delivery of products and quick notification of order status
+IoTs assists SCM: Gather business intelligence regarding product usage by customers after a product is sold
+A radio-frequency identification (RFID) tag is a small electronic device consisting of a microchip and an antenna
+This device performs the same task as barcodes, universal product codes (UPCs), and magnetic strips on credit and debit cards: It provides a unique identification for the card or the object carrying the tag
+Unlike barcodes and other systems, RFID devices do not have to be in contact with the scanner to be read
+The RFID tag’s advantages, along with its decreasing price (less than 10 cents per tag), have made this device more popular with the retail industry and other industries
+There are two types of RFID tags: passive and active
+Passive RFID tags have no internal power supply, so they can be very small
+Typically, passive RFID tags absorb the signal from the receiver device, convert this signal into energy, and use this energy to respond to the receiver
+Passive tags usually last longer than active tags; the best ones have about 10 years of life
+Active RFID tags have an internal power source and are usually more reliable than passive tags and can broadcast signals over a much wider range
+Active RFID tags can also be embedded in a sticker or under the skin (human or animal)
+RFID’s disadvantages: signals from multiple readers can overlap, signals can be jammed or disrupted
+RFID’s disadvantages: the tags are difficult to remove
+RFID’s disadvantages: Privacy and security issues include being able to read a tag’s contents after an item has left the store
+RFID’s disadvantages: tags being read without the customer’s knowledge
+RFID’s disadvantages: Tags with unique serial numbers being linked to credit card numbers
+RFID devices have been used by many organizations in the public and private sectors, including Walmart, the U.S. Department of Defense, Toyota, and the Gap.
+Common RFID applications: Tracking and identification, Payment and stored-value systems, Access control, Anticounterfeiting, Health care
+A QR (quick response) code is a matrix barcode consisting of black modules arranged in a square pattern on a white background
+QR code offers a larger storage capacity compared to standard UPC barcodes
+QR codes have recently grown in popularity, particularly as a marketing tool
+QR codes have the following features: High storage capacity, Small printout size, Dirt and dust resistance, Readable from any direction, Compatible with the Japanese character set
+QR codes can be read by smartphones that are equipped with cameras
+The scanner app must first be downloaded to the smartphone in order for the camera to be able to read the QR code
+This eliminates the need for bulky handheld scanners, which is one of the reasons for the QR code’s growing popularity over barcodes and RFID tags
+In fact, a major reason for their popularity is that they can store (and digitally present) much more data, including URL links, geo coordinates, and text.
+Businesses, too, may start using more QR codes—on their business cards, coffee mugs, Web sites, pop-up banners, and so forth—to convey information to their business partners. In other words, business employees 
+will no longer need to carry paper documents around with them. QR codes could also be used in trade shows to attract customers to a business’s Web site

@@ -1,0 +1,123 @@
+Static Route is a data traffic route that has been manually entered into either a router’s or a computer’s routing table
+A static route is specified in a PC in terms of the computer’s default gateway, and routers sometimes use a static route when specifying where the network data traffic is to be forwarded.
+The static route most commonly used in a host computer is the default gateway, or default route.
+The default gateway specifies where the data traffic is to be sent when the destination address for the data is not in the same LAN or is unknown.
+If you don’t have a route specified for a subnet in your network or if you have a missing route, the default route is used.
+The routing tables for the host PC can be obtained by entering the command netstat -r at the PC’s command prompt and from the macOS terminal screen.
+The command route print can also be used to view the active routes from the host PC
+The default route is specified in the routing table by a 0.0.0.0 network address entry with subnet mask 0.0.0.0.
+Loopback is a mechanism by which data is routed directly back to the source
+The loopback can be used to check whether the network interface is working; if it is, pinging IP address 127.0.0.1 generates a reply.
+In IPv6, the IPv6 loopback address is 0000:0000:0000:0000:0000:0000:0000:0001, which can be simplified to ::1.
+ip route is the router configuration command for manually setting the next hop IP address
+Variable-Length Subnet Masking (VLSM) is a process in which routes can be configured using different subnet masks
+show ip route (sh ip route) is the command that displays the routes and the routing address entry into the routing table
+routing table code S is the router code for a static route
+routing table code C is the router code for specifying a directly connected network
+Static routing can be suitable for situations in which there is only one route to the destination, such as in a wide area network (WAN) or an Internet feed.
+The problem with using a static routing protocol in a network is the amount of maintenance required by the network administrator to keep the route selections up to date in a large network.
+Dynamic routing protocols communicate routing information between the routers to determine the best route to use to forward the data packets.
+Gateway of Last Resort is the IP address of the router in a network to which data packets with unknown routes should be forwarded
+show ip route static (sh ip route static) the command that limits the routes displayed to only static ones
+show running-config (sh run) is the command that displays the router’s running configuration
+show startup-config (sh start) is the command that displays the router’s startup configuration
+show running-config (sh run) does not show what is currently saved in the router’s nonvolatile memory (NVRAM).
+The command show startup-config (sh start) displays the router’s configuration saved in NVRAM.
+copy running-configuration startup-configuration (copy run start) is the command for copying the running configuration to the startup configuration
+write memory (wr m) is the command that saves configuration changes to memory
+Static routing protocols are essential when configuring the default route (gateway of last resort) on routers
+Dynamic Routing Protocol is a protocol that dynamically updates a routing table to account for loss of or changes in routes or changes in data traffic
+In dynamic routing, routers update their routing tables using information obtained from adjacent routers.
+Dynamic routing protocols are responsible for four primary features: What information is exchanged between routers, When updated routing information is exchanged, When updated routing information is exchanged, Steps for reacting to changes in the network, Criteria for establishing the best route selection
+Four key issues are associated with dynamic routing protocols: Path determination, Metric, Convergence, Load balancing
+Path determination is a procedure in the protocol that is used to determine the best route
+A metric is a numeric measure assigned to a route that can be used to rank routes from best to worst; the smaller the number, the better.
+Convergence occurs when a router obtains a clear view of the routes in a network
+The time it takes for the router to obtain a clear view is called the convergence time
+Load balancing is a procedure in a protocol that enables routers to use any of the multiple data paths available from multiple routers to reach the destination.
+The purpose of load balancing is to distribute data traffic across multiple links or routers, thereby improving the reliability of a route.
+Hop count is the number of routers the data packet must pass through to reach the destination network.
+Reliability is a measure of the reliability of the link, typically in terms of the number of errors.
+Bandwidth is the data capacity of the networking link. For example, a 1000Mbps link has greater data capacity than a 100Mbps or 10Mbps Ethernet link
+Delay is the time it takes for a data packet to travel from source to destination
+Cost is a value assigned by a routing protocol or a network administrator to a link or an interface. Typically, the value is based on the referenced bandwidth.
+Load is the network activity on a link or router.
+Ticks is the measured delay time in terms of clock ticks, where each tick is approximately 55 milliseconds (1⁄18 second).
+Latency is a measure of how much time it takes for a data packet to get from the input into a network to its output.
+Latency results in poor throughput in a computer network and should be minimized
+There are two types of internal dynamic routing protocols: distance vector and link state.
+Another concept related to metrics is administrative distance, which enables routing protocols to select the best path when more than one path is available.
+A distance vector protocol is a routing algorithm that periodically sends the entire routing table to its neighboring or adjacent router.
+In distance vector protocol, when the neighboring router receives the table, it assigns a distance vector number to each route.
+In distance vector protocol, the distance vector number is typically specified by some metric, such as hop count.
+With a distance vector protocol, the router first determines its neighbors or adjacent routers
+All the connected routes have a distance or hop count of 0
+Routers use the hop count metric to determine the best route for forwarding a data packet.
+With a distance vector protocol, each router determines its neighbors, builds its list of neighboring routers, and sends its routing table to its neighbors.
+Routing Information Protocol (RIP) is a dynamic routing protocol, which means the routers periodically exchange routes.
+RIP is classified as a distance vector protocol, and it uses router hop count as the metric.
+RIP permits a maximum of 15 hops to prevent routing loops.
+Routing Loop is a situation in which data is forwarded back to the router that sent the data packets
+Routing tables can be quite large, and the transfer can consume network bandwidth. This is of great concern in networks with limited bandwidth (also called throughput) because the periodic exchange can lead to slowdowns in data traffic.
+RIP is good only for very small networks; it is not suited for networks that need fast convergence
+You enable the RIP routing protocol on a router by entering the command router rip at the Router(config)# prompt in privileged EXEC mode.
+Network statements are required to declare which networks will be advertised by the RIP routing protocol.
+To advertise the network means to share the routing table containing the network with neighbors.
+The network command requires the use of a class network address (Class A, Class B, Class C) after the network command.
+Classful Addressing is addressing that requires the network portion of a particular network address
+To configure RIP, at the (config)# prompt, enter the command “router rip” and enter the specific network which will be running the RIP protocol.
+RIP can be used only in contiguous networks, which means the networks and routes must have the same class network address.
+To use RIP, the router addresses for the network connecting the routers must be the same class as the LAN connected to the router
+The command router rip enables the RIP routing protocol
+The command network 10.0.0.0 instructs the router to use RIP on the 10 network.
+Notice that the router rip command places the router in the router configuration mode, as shown in the prompt (RouterA(config)#).
+The command show ip interface brief (sh ip int brief) checks whether the IP address has been assigned to the interface and to check the status and protocol settings.
+The command show ip protocol (sh ip protocol) is used to display the routing protocols running on a router
+The routes configured for the router can be displayed by using the show ip route (sh ip route) command
+RIP is a classful routing-only protocol: It therefore does not support VLSM and CIDR, which prevents it from being the routing protocol of choice for dealing with different-sized subnets in a network.
+RIP does not support router authentication: This means routers are vulnerable to exploits.
+RIP has a hop count limit of 15: With RIP, a destination that is more than 15 hops away is considered unreachable.
+RIP uses hop count as a metric: RIP determines the best route by counting the number of hops to reach the destination.
+RIP does not take into consideration whether a higher hop count route might have higher bandwidth.
+RIPv2 still cannot resolve the hop count and metric decision limitations of RIPv1.
+To configure RIPv2 to be used, type the command version 2 at the (Router(config)#) prompt after router rip
+Link State Protocol is a type of protocol that establishes a relationship with a neighboring router and uses route advertisements to build routing tables
+The link state advertisements are sent only if there is a change or loss in the network routes and the link state protocols converge to route selection quickly.
+The link state advertisements has a distinct advantage over distance vector protocols, which exchange updated routing tables at fixed intervals and are slow to converge.
+Link state protocols are also called shortest path first protocols, based on the algorithm developed by E. W. Dijkstra.
+Link state protocols use hello packets to verify that communication is established with neighbor routers.
+The key issues related to link state protocols: They find neighbors/adjacencies, They use route advertisements to build the routing table, They send hello packets, They send updates when routing changes.
+Open Shortest Path First (OSPF) is a dynamic link state routing protocol that is supported by many vendors
+OSPF was developed by the Interior Gateway Protocol (IGP) working group for the Internet Engineering Task Force (IETF) specifically for use in TCP/IP networks.
+The main advantages of OSPF are rapid convergence and very low bandwidth consumption.
+When a network is completely converged, all the routers in the network agree on the best routes.
+After the initial flooding of routes in the form of link state advertisements (LSAs), OSPF sends route updates only when there is a change in the network.
+Every time LSAs are sent, each router must recalculate the routing table.
+RIP exchanges the entire routing table at fixed intervals—every 30 seconds.
+With RIP, the routing table update is propagated through the network at regular intervals, and therefore the convergence to final routes is slow.
+With OSPF, an LSA is sent as soon as the loss of a route has been detected.
+With OSPF, the loss is immediately reported to neighbor routers, and new routes are calculated much more quickly than with RIP.
+Hello Packets are packets used with the OSPF protocol to verify that links are still communicating
+OSPF sends small hello packets at regular intervals to adjacent routers to verify that the link between two routers is active and the routers are communicating.
+OSPF uses the concept of areas to partition a large network into smaller networks.
+With OSPF, the advantage of using the concept of areas is that the routers have to calculate routes only for their area.
+Area 0 is reserved for the root area, which is the backbone of the network
+Backbone is the primary path for data traffic to and from destinations and sources in a campus network
+All areas must connect to area 0, and area 0 cannot be split.
+OSPF allows the use of variable-length subnet masks, which enable different-size subnets in the network to better meet the needs of the network and more efficiently use the network’s limited IP address space.
+A subnet of size 4 is sufficient for the inter-router link that includes the IP addresses for the router interfaces, the network address, and the broadcast address.
+One of the advantages of OSPF: not proprietary, available for use by all vendors.
+One of the advantages of OSPF: Link state changes are immediately reported, which enables rapid convergence.
+One of the advantages of OSPF: Consumes very little network bandwidth.
+One of the advantages of OSPF: Uses VLSM.
+One of the advantages of OSPF: Uses areas to partition the network into smaller networks, minimizing the number of route calculations.
+One of the disadvantages of OSPF: Can be very complicated to implement.
+One of the disadvantages of OSPF: Is process intensive due to routing table calculations.
+One of the disadvantages of OSPF: Intermittent routes that are going up and down create excessive LSA updates; this is called route flapping.
+Route flapping is a situation in which intermittent routes go up and down, creating excessive LSA updates
+IS-IS stands for Intermediate System-to-Intermediate System, a link state protocol used in many service provider core networks
+The term intermediate system refers to a router.
+Similarities between IS-IS and OSPF: both are link state protocols that use the Dijkstra algorithm
+Similarities between IS-IS and OSPF: both are classless protocols, which means they support VLSM
+Similarities between IS-IS and OSPF: both use hello packets to form and maintain adjacencies and use the areas concept
+In IS-IS, the Network Entity Title (NET) is an address that is unique to each router

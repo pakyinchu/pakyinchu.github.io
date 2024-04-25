@@ -1,0 +1,114 @@
+Structured decisions can be automated because a well-defined standard operating procedure exists
+Examples of structured decisions are record keeping, payroll
+Semistructured decisions are not as well-defined but include a structured aspect
+Examples of semistructured decisions are sales forecasting, budget preparation
+Unstructured decisions are one-time decisions with no standard operating procedure
+Decision maker’s intuition plays an important role in unstructured decisions
+Example of unstructured decisions are executive information system
+Challenges in semistructured and unstructured decisions are multiple criteria and users have to choose between conflicting objectives
+Management support systems (MSSs) are different types of information systems that have been developed to support certain aspects and types of decisions
+In strategic management, introduction of a new product is an example of unstructured decision
+In strategic management, mergers are an example of semistructured decision
+In strategic management, plant location is an example of structured decision
+In tactical management, resolving conflicts between two divisions are an example of unstructured decision
+In tactical management, sales forecast is an example of unstructured decision
+In tactical management, budget preparation is an example of structured decision
+In operational management, setting queue priorities is an unstructured decision
+In operational management, accounts receivable is an example of semistructured decision
+In operational management, payroll is an example of structured decision
+Economist Herbert Simon defined three phases in decision making: Intelligence phase, Design phase, Choice phase
+A fourth phase can be added in the decision making process Economist Herbert Simon defined which is the implementation phase
+The intelligence phase examine the organization’s environment for conditions that need decisions
+The intelligence phase collect and process data from a variety of sources
+The intelligence phase allows decision maker to discover ways to approach the problem
+The intelligence phase identify what is going on, then get a better understanding, and finally identify alternative solutions
+The design phase defines the criteria for making a decision and generates alternatives for meeting the criteria
+The design phase defines associations between the criteria and the alternatives and requires understanding how each alternative affects the criteria
+Information technology does not support the design phase
+Collaboration and video-conferencing systems can be helpful for the design phase
+The choice phase selects the best and most effective course of action
+The choice phase requires analyzing each alternative and its relationship to the criteria
+A decision support system (DSS) can support the choice phase
+DSS helps sort through possible solutions to choose the best one for the organization
+DSS includes tools for calculating cost-benefit ratios
+The implementation phase devises a plan for carrying out the selected choice and obtain resources to implement
+In the implementation phase, ideas are converted into actions
+In the implementation phase, DSS does a follow-up assessment on how well a solution is performing
+Decision support system (DSS) is an interactive information system designed to assist decision makers in an organization
+DSS includes Hardware, Software, Data, Mathematical and statistical models
+One of the requirements of decision support systems is be interactive and incorporate human element as well as hardware and software
+One of the requirements of decision support systems is to use internal and external data
+One of the requirements of decision support systems is to include mathematical and statistical models
+One of the requirements of decision support systems is to support decision makers at all levels
+One of the requirements of decision support systems is to emphasize semistructured and unstructured tasks
+Components of Decision Support Systems include database, model base, and user interface
+Database includes internal and external data and a database management system (DBMS) which enables a DSS to perform data analysis
+Model base includes mathematical and statistical models which enable a DSS to analyze information
+User interface allow users to access the DSS
+DSS includes features to support decision making by What-if analysis, Goal-seeking, Sensitivity analysis, Exception reporting analysis, Optimization analysis
+Other DSS includes features include Graphical analysis, forecasting, simulation, statistical analysis, and modeling analysis
+The role Users is crucial because they use the DSS
+The role Users may include department or organizational units in addition to people
+Managerial designer defines the management issues in designing and using a DSS
+Managerial designer addresses questions like what type of data to collect and from what sources
+Managerial designer addresses questions like how to organize data and how recent should data be and how to update them
+Managerial designer addresses questions like balance between aggregated and disaggregated data
+Technical designer focuses on how the DSS is implemented
+Technical designer addresses questions data storage, File structure, User access, Response time, Security measures
+Model builder is the liaison between users and designers
+Model builder is responsible for supplying information including what the model does, what data inputs the model accepts, how the model’s output should be interpreted, and what assumptions go into creating and using the model
+Value may be a more useful measure than cost for DDSs
+One of the benefits of DDSs is the increased number of alternatives examined
+One of the benefits of DDSs is fast response to unexpected situations
+One of the benefits of DDSs is the ability to make one-of-a-kind decisions
+One of the benefits of DDSs is the new insights and learning generated
+One of the benefits of DDSs is improved communication, control, and decisions
+One of the benefits of DDSs is cost and time savings
+One of the benefits of DDSs is effective teamwork and use of data resources
+Executive information system (EIS) gives executives easy access to DDS data
+Most Executive information system (EIS) includes a digital dashboard that integrates information from multiple sources and presents it in a unified, understandable format
+One of the important characteristics of an EIS is tailored to management’s information needs
+One of the important characteristics of an EIS is ability to track and present critical data in multiple formats
+One of the important characteristics of an EIS is the provision of online access and analysis tools
+One of the important characteristics of an EIS is accessibility of both internal and external data
+One of the important characteristics of an EIS is the supports for electronic communication
+EISs provide managers with analytical and decision-making tools 
+EISs include graphical representations of data that help executives make critical decisions
+EISs let executives share information with others quickly and easily
+EISs enable managers to improve efficiency and effectiveness in decision making
+Organizational resistance to the project is one of the factors that lead to a failed EIS
+Perception that the project is unimportant is one of the factors that lead to a failed EIS
+Lack or loss of interest from management is one of the factors that lead to a failed EIS
+Inability to define objectives and information or meet objectives is one of the factors that lead to a failed EIS
+System’s objectives are not linked to factors critical to the organization’s success is one of the factors that lead to a failed EIS
+Project’s costs cannot be justified is one of the factors that lead to a failed EIS
+Development time is too long or system is too complicated is one of the factors that lead to a failed EIS
+Vendor support has been discontinued is one of the factors that lead to a failed EIS
+Lack of understanding of executives’ needs leads to lack of relevant information is one of the factors that lead to a failed EIS
+Geographic Information System (GIS) captures, stores, and analyses data to inform location-related decision making
+Two major component of a GIS are digitized maps and spatially oriented databases
+Geographic Information System (GIS) performs tasks that require complex geographical context associating spatial attributes with places on a map and integrate map data with a query
+GIS with analytical capability interprets spatial data to evaluate impact of a decision, example: Google Maps
+GIS Applications include education planning, urban planning, Government, Insurance, Marketing, Real estate, Transportation and logistics
+Collaboration Systems is a type of software that assists group decision-makers by providing access to shared environment and information
+Potential advantages of Collaboration Systems is that it enables a decision maker to easily communicate and coordinate with team, increases productivity and effectiveness, facilitates teamwork, saves time, reduces travel-related costs and stress
+Potential disadvantages Collaboration Systems is that it lacks human touch and other nonverbal cues, Unnecessary meetings, Security problems
+Success of Collaboration Systems depends on Matching the GSS’s level and sophistication to the group’s size and the scope of the task
+Success of Collaboration Systems depends on providing supportive management that is willing to champion using a GSS in the organization
+Collaboration Systems can be either synchronous or asynchronous
+Three broad groups of collaboration systems: Communication software, Task management software, and Document and content management software
+Communication software lets participants communicate and share files
+Task management software lets participants prioritize and track tasks
+Document and content management software lets participants share and work together on different files
+Collaboration software can include many components, and you may need only a few
+The most expensive collaboration software may not be the right choice for you
+Consider frequency of updates and patches, user groups, and support offered when choosing the right collaboration software
+You should define your needs, compare prices, and evaluate vendor support when choosing the Right Collaboration Software
+One of the guidelines for Designing a Management Support System is to get support from top management
+One of the guidelines for Designing a Management Support System is clearly define objectives and benefits
+One of the guidelines for Designing a Management Support System is identify executives’ information needs 
+One of the guidelines for Designing a Management Support System is to keep lines of communication open
+One of the guidelines for Designing a Management Support System is to hide system’s complexity, keep interface simple
+One of the guidelines for Designing a Management Support System is to keep look and feel consistent
+One of the guidelines for Designing a Management Support System is to design a flexible system
+One of the guidelines for Designing a Management Support System is to make sure response time is fast
