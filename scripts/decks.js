@@ -198,7 +198,9 @@ function createDataset() {
         "name": "Wilson Chu",
         "levels": [{"level": 0, "updateTime": null}],
         "lastSeen": null,
-        "deck": deck
+        "deck": {
+            cards: deck.cards.filter(card => card.answers && card.answers.length > 0)
+        }
     }
 }
 
